@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useRef } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Menubar } from 'primereact/menubar';  // PrimeReact Menubar
+import Overview from './sectionComponents/Overview';
 import './App.css';
+import 'primereact/resources/themes/saga-blue/theme.css';  // PrimeReact theme
+import 'primereact/resources/primereact.min.css';          // PrimeReact core CSS
+import 'primeicons/primeicons.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    const skillsRef = useRef<null | HTMLDivElement>(null);
+    const experienceRef = useRef<null | HTMLDivElement>(null);
+    const expertiseRef = useRef<null | HTMLDivElement>(null);
+    const awardsRef = useRef<null | HTMLDivElement>(null);
+    const contactRef = useRef<null | HTMLDivElement>(null);
+
+    const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+        if (ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    // Menu items for the PrimeReact Menubar
+    const items = [
+        { label: 'Skills', icon: 'pi pi-book', command: () => scrollToSection(skillsRef) },
+        { label: 'Experience',icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },
+        { label: 'Expertise',icon: 'pi pi-key', command: () => scrollToSection(expertiseRef) },
+        { label: 'Awards',icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
+        { label: 'Contact',icon: 'pi pi-phone', command: () => scrollToSection(contactRef) }
+    ];
+
+    return (
+        <Router>
+            <div className="app">
+                {/* PrimeReact Menubar */}
+                <Menubar model={items} />
+
+                {/* Pass section refs to Overview */}
+                <Overview
+                    skillsRef={skillsRef}
+                    experienceRef={experienceRef}
+                    expertiseRef={expertiseRef}
+                    awardsRef={awardsRef}
+                    contactRef={contactRef}
+                />
+            </div>
+        </Router>
+    );
+};
 
 export default App;

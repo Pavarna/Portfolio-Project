@@ -1,0 +1,15 @@
+.awards {
+    background-color: #fff1e6;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #6d6875;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}

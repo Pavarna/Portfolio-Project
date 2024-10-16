@@ -1,0 +1,92 @@
+/* Overview Container */
+.overview-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack cards vertically */
+    gap: 20px;
+    /* Space between cards */
+    margin: 20px;
+    /* Margin around the container */
+}
+
+/* Overview Card Style */
+.overview-card {
+    padding: 1rem;
+    /* Padding inside the card */
+    border-radius: 12px;
+    /* Rounded corners */
+    background: #e8feff;
+    /* Fallback color */
+    background: linear-gradient(to right, #d5fcff, #f7f6cd, #dfffe0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+
+    /* Set maximum width and center the card */
+    max-width: 100rem;
+    /* Set a maximum width to control the card's size */
+    margin: 3rem auto;
+    /* Center the card with margin from all sides */
+}
+
+/* Title Style */
+.overview-title {
+    margin: 0;
+    /* Remove margin below the title */
+    text-align: center;
+    /* Center the title */
+}
+
+.overview-title-role{
+    background: linear-gradient(to right, #ef346c, #ff1bfb, #4a26ff); /* Gradient background */
+    background-clip: text; /* Standard */
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for non-supporting browsers */  padding: 20px;
+    width: auto; /* Let the card adjust its size, but it won't shrink */
+    min-width: 300px; /* You can adjust the min-width of the card as necessary */
+    text-align: center;
+}
+
+/* Optional: Adjust the font size of the animated part */
+.overview-title-h2 {
+    margin-left: 10px; /* Space between "Pavarna -" and animated text */
+    font-size: inherit; /* Ensure the font size matches */
+    line-height: inherit; /* Match the line height */
+}
+
+/* Bitmoji Section */
+.bitmoji-container {
+    width: 100%;
+    /* Take full width */
+    max-width: 80px;
+    /* Fixed width for Bitmoji */
+    transition: transform 0.5s ease;
+    /* Smooth transition for animation */
+}
+
+/* Bitmoji GIF */
+.bitmoji-gif {
+    width: 100%;
+    /* Responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Content Section */
+.content-section {
+    flex: 2;
+    /* 2/3 of the space */
+}
+
+/* Optional: Add a small animation to the Bitmoji */
+.bitmoji-container:hover {
+    transform: rotate(5deg) scale(1.1);
+    /* Rotate and scale slightly on hover */
+}
+
+/* Card Hover Effect */
+.overview-card:hover {
+    transform: scale(1.02);
+    /* Scale up slightly on hover */
+}
+

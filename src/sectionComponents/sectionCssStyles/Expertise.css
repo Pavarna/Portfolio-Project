@@ -1,0 +1,21 @@
+.expertise {
+    background-color: #fdfcfb;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #6d6875;
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    padding: 5px 0;
+    color: #444;
+}

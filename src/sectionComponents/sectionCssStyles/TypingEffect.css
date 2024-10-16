@@ -1,0 +1,23 @@
+.wrap {
+    border-right: 0.15em solid black; /* Cursor effect */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow text */
+    display: inline-block; /* Keeps it inline */
+    animation: blink-caret 0.75s step-end infinite; /* Blinking cursor */
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Invisible cursor */
+    }
+    50% {
+        border-color: black; /* Visible cursor */
+    }
+}
+.typewriter-container {
+    display: inline-block;
+    min-width: 25ch; /* Set a minimum width based on the length of the longest string */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Ensure no overflow during typing */
+}

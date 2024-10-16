@@ -1,0 +1,34 @@
+.skills {
+    background-color: #e2eafc;  /* Soft pastel blue background */
+    padding: 40px;
+    border-radius: 10px;
+    animation: slideIn 1s ease-in;  /* Cool slide-in animation */
+}
+
+h2 {
+    color: #6d6875;  /* Muted pastel purple */
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    padding: 5px 0;
+    color: #444;
+    transition: transform 0.3s, color 0.3s;  /* Animation on hover */
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    color: #3498db;  /* Change color on hover */
+}
+
+/* Animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

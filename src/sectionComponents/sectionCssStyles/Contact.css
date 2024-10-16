@@ -1,0 +1,30 @@
+.contact-section {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #6d6875;  /* Muted pastel purple */
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #3498db;  /* Soft pastel blue for links */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #6495ed;  /* Darker blue on hover */
+    text-decoration: underline;
+}

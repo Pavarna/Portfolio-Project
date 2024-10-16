@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+/* General App Styles */
+.app {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #6b28d6; 
+  background-color: white; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* PrimeReact Menubar Customization */
+.p-menubar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #e8feff; /* Fallback color */
+  background: linear-gradient(to right, #e8feff, #e2fad3,#feffdf); 
+  border-bottom: 2px solid #f3c1e5;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.p-menubar-root-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Add padding to the body to avoid content overlapping the fixed Menubar */
+body {
+  padding-top: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text{
+  font-size: 1.2rem;
+  padding: 0px;
+  display: block;
+}
+
+.p-menuitem {
+  transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+/* Hover and Focus Effect for Menu Items */
+.p-menuitem:hover {
+  background-color: rgb(255, 255, 255); /* White background on hover */
+}
+
+/* Gradient text effect on hover/focus */
+.p-menuitem:hover .p-menuitem-link,
+.p-menuitem.p-focus .p-menuitem-link {
+  background: linear-gradient(to right, #f568a5, #f934ec, #8786eb); /* Gradient background */
+  background-clip: text; /* Standard */
+  -webkit-background-clip: text; /* For Safari */
+  -webkit-text-fill-color: transparent; /* For Safari */
+  color: transparent; /* Fallback for non-supporting browsers */
+}
+
+.p-menuitem .p-menuitem-link, .p-menuitem-link {
+  background: linear-gradient(to right, #6641f9, #9d069b, #f33d44); /* Define your gradient */
+  background-clip: text; /* Clip the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+  transition: background 0.3s; /* Smooth transition for gradient */
 }
