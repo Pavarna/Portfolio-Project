@@ -2,91 +2,98 @@
 .overview-container {
     display: flex;
     flex-direction: column;
-    /* Stack cards vertically */
-    gap: 20px;
-    /* Space between cards */
-    margin: 20px;
-    /* Margin around the container */
+    margin: 1rem; /* Use rem for responsive margin */
 }
 
 /* Overview Card Style */
 .overview-card {
     padding: 1rem;
-    /* Padding inside the card */
     border-radius: 12px;
-    /* Rounded corners */
-    background: #e8feff;
-    /* Fallback color */
-    background: linear-gradient(to right, #d5fcff, #f7f6cd, #dfffe0);
+    background: linear-gradient(to right, #fbfed1, #ffffff, #dbffcb);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow for depth */
-
-    /* Set maximum width and center the card */
-    max-width: 100rem;
-    /* Set a maximum width to control the card's size */
-    margin: 3rem auto;
-    /* Center the card with margin from all sides */
+    margin: 2rem auto; /* Center the card with margins */
+    max-width: 90%; /* Limit the card width */
+    animation: card-fade-in-bottom 1s ease forwards; /* Fade-In from bottom for cards */
 }
 
 /* Title Style */
 .overview-title {
     margin: 0;
-    /* Remove margin below the title */
     text-align: center;
-    /* Center the title */
+    font-size: 1.5rem; /* Slightly larger font size for better readability */
+    color: black;
 }
 
-.overview-title-role{
-    background: linear-gradient(to right, #ef346c, #ff1bfb, #4a26ff); /* Gradient background */
+.overview-title-role {
+    background: linear-gradient(to right, #ef346c, #ff1bfb, #4a26ff);
     background-clip: text; /* Standard */
     -webkit-background-clip: text; /* For Safari */
+    -moz-background-clip: text; /* For Firefox */
     -webkit-text-fill-color: transparent; /* For Safari */
-    color: transparent; /* Fallback for non-supporting browsers */  padding: 20px;
-    width: auto; /* Let the card adjust its size, but it won't shrink */
-    min-width: 300px; /* You can adjust the min-width of the card as necessary */
+    color: transparent; /* Fallback for non-supporting browsers */
+    padding: 0.5rem; /* Use rem for padding */
+    min-width: 300px; /* Minimum width */
     text-align: center;
-}
-
-/* Optional: Adjust the font size of the animated part */
-.overview-title-h2 {
-    margin-left: 10px; /* Space between "Pavarna -" and animated text */
-    font-size: inherit; /* Ensure the font size matches */
-    line-height: inherit; /* Match the line height */
 }
 
 /* Bitmoji Section */
 .bitmoji-container {
-    width: 100%;
-    /* Take full width */
-    max-width: 80px;
-    /* Fixed width for Bitmoji */
-    transition: transform 0.5s ease;
-    /* Smooth transition for animation */
+    max-width: 300px; /* Fixed width for Bitmoji */
+    transition: transform 0.5s ease; /* Smooth transition for animation */
+    margin-top: -20px; /* Adjust to lift Bitmoji slightly */
 }
 
 /* Bitmoji GIF */
 .bitmoji-gif {
-    width: 100%;
-    /* Responsive */
-    height: auto;
-    /* Maintain aspect ratio */
+    width: 100%; /* Make Bitmoji responsive */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Content Section */
 .content-section {
-    flex: 2;
-    /* 2/3 of the space */
-}
-
-/* Optional: Add a small animation to the Bitmoji */
-.bitmoji-container:hover {
-    transform: rotate(5deg) scale(1.1);
-    /* Rotate and scale slightly on hover */
+    flex: 2; /* 2/3 of the space */
 }
 
 /* Card Hover Effect */
 .overview-card:hover {
     transform: scale(1.02);
-    /* Scale up slightly on hover */
+    transition: transform 0.3s ease;
 }
 
+/* List Container */
+.description-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to right, #d2ffff, #d8ffe3, #fcffe1, #d2ffff);
+    color: black;
+}
+
+.description-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for Card Fade-In from Bottom */
+@keyframes card-fade-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for Title Slide-In */
+@keyframes title-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -9,6 +9,7 @@ import 'primeicons/primeicons.css';
 
 const App: React.FC = () => {
     const skillsRef = useRef<null | HTMLDivElement>(null);
+    const profileRef = useRef<null | HTMLDivElement>(null);
     const experienceRef = useRef<null | HTMLDivElement>(null);
     const expertiseRef = useRef<null | HTMLDivElement>(null);
     const awardsRef = useRef<null | HTMLDivElement>(null);
@@ -22,11 +23,12 @@ const App: React.FC = () => {
 
     // Menu items for the PrimeReact Menubar
     const items = [
+        { label: 'Profile', icon: 'pi pi-book', command: () => scrollToSection(profileRef) },
         { label: 'Skills', icon: 'pi pi-book', command: () => scrollToSection(skillsRef) },
-        { label: 'Experience',icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },
-        { label: 'Expertise',icon: 'pi pi-key', command: () => scrollToSection(expertiseRef) },
-        { label: 'Awards',icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
-        { label: 'Contact',icon: 'pi pi-phone', command: () => scrollToSection(contactRef) }
+        { label: 'Experience', icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },
+        { label: 'Expertise', icon: 'pi pi-key', command: () => scrollToSection(expertiseRef) },
+        { label: 'Awards', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
+        { label: 'Contact', icon: 'pi pi-phone', command: () => scrollToSection(contactRef) }
     ];
 
     return (
@@ -37,6 +39,7 @@ const App: React.FC = () => {
 
                 {/* Pass section refs to Overview */}
                 <Overview
+                    profileRef={profileRef}
                     skillsRef={skillsRef}
                     experienceRef={experienceRef}
                     expertiseRef={expertiseRef}

@@ -8,8 +8,10 @@ import Expertise from './Expertise';
 import Awards from './Awards';
 import Contact from './Contact';
 import 'primeflex/primeflex.css';
+import Profile from './Profile';
 
 interface OverviewProps {
+    profileRef:React.RefObject<HTMLDivElement>;
     skillsRef: React.RefObject<HTMLDivElement>;
     experienceRef: React.RefObject<HTMLDivElement>;
     expertiseRef: React.RefObject<HTMLDivElement>;
@@ -17,11 +19,11 @@ interface OverviewProps {
     contactRef: React.RefObject<HTMLDivElement>;
 }
 
-const Overview: React.FC<OverviewProps> = ({ skillsRef, experienceRef, expertiseRef, awardsRef, contactRef }) => {
-    const roles = ["Frontend Developer", "ReactJs Developer", "Software Developer","Educational YouTuber"]; // Array of roles
+const Overview: React.FC<OverviewProps> = ({ profileRef,skillsRef, experienceRef, expertiseRef, awardsRef, contactRef }) => {
+    const roles = ["Frontend Developer", "ReactJs Developer", "Software Developer", "Educational YouTuber"]; // Array of roles
     const [role, setRole] = useState(roles[0]); // Initial role state
     const [index, setIndex] = useState(0); // Index for tracking current role
-   
+
     useEffect(() => {
         // Function to change role every 2 seconds
         const intervalId = setInterval(() => {
@@ -37,31 +39,15 @@ const Overview: React.FC<OverviewProps> = ({ skillsRef, experienceRef, expertise
 
     return (
         <div className="overview-container">
-            {/* Overview Card */}
-            <Card className="overview-card">
-                <div className="overview-title">
-                    <h1 className="overview-title-name"> Pavarna  S - <span className="overview-title-role"> {role}</span></h1>
-                </div>
-                <div className="flex overview-content">
-                    <div className="flex-grow-2 flex align-items-center justify-content-center bitmoji-container">
-                        <img src={BitmojiGIF} alt="My Bitmoji" className="bitmoji-gif" />
-                    </div>
+            {/* Profile Card */}           
+            <div className="profile-content" ref={profileRef}>
+                <Profile />
+            </div>
 
-                    <div className="flex-grow-4 flex align-items-center justify-content-start content-section">
-                        <p>
-                            Dynamic and results-driven Front-End Developer with 2+ years of experience specializing in ReactJS, TypeScript, and UI/UX design. Proven track record of building responsive, user-friendly web applications that meet business objectives while ensuring code quality, security, and scalability. Strong expertise in Agile development, DevSecOps, and collaborating with cross-functional teams to deliver high-quality software solutions.
-                        </p>
-                    </div>
-                </div>
-            </Card>
+            <div className="skills-content" ref={skillsRef}>
+                <Skills />
+            </div>
 
-            {/* Skills Card */}
-            <Card className="skills-card">
-                <div className="skills-content" ref={skillsRef}>
-                    <h2>Skills</h2>
-                    <Skills />
-                </div>
-            </Card>
 
             {/* Experience Card */}
             <Card className="experience-card">

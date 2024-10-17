@@ -1,34 +1,156 @@
-.skills {
-    background-color: #e2eafc;  /* Soft pastel blue background */
-    padding: 40px;
-    border-radius: 10px;
-    animation: slideIn 1s ease-in;  /* Cool slide-in animation */
+/* Skills Container */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    /* Center the card horizontally */
+    margin: 1rem;
+    /* Use rem for responsive margin */
 }
 
-h2 {
-    color: #6d6875;  /* Muted pastel purple */
-    font-size: 2rem;
+/* Flex layout for the content */
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    justify-content: space-between;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+/* Skills Card Style */
+.skills-card {
+    padding: 1rem;
+    /* Padding inside the card */
+    border-radius: 12px;
+    /* Rounded corners */
+    background: linear-gradient(to right, #fdeaf0, #fafffb, #c7e7ff);
+    /* Fallback color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    width: 100%;
+    /* Full width for responsiveness */
+    max-width: 90%;
+    /* Limit the card width to maintain layout */
+    margin: 3rem auto;
+    /* Center the card with margins */
 }
 
-ul li {
-    font-size: 1.1rem;
-    padding: 5px 0;
-    color: #444;
-    transition: transform 0.3s, color 0.3s;  /* Animation on hover */
+/* Bitmoji Section */
+.skills-bitmoji-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack title and Bitmoji vertically */
+    align-items: center;
+    /* Center align items */
+    width: 100%;
+    /* Full width for responsive layout */
+    max-width: 400px;
+    /* Set a max-width for the Bitmoji */
+    transition: transform 0.5s ease;
+    /* Smooth transition for animation */
+    margin-top: -20px;
+    /* Adjust as needed to lift Bitmoji up */
 }
 
-ul li:hover {
+/* Bitmoji GIF */
+.bitmoji-gif {
+    width: 100%;
+    /* Make Bitmoji responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Content Section */
+.content-section {
+    flex: 2;
+    /* 2/3 of the space */
+}
+
+/* Optional: Add a small animation to the Bitmoji */
+.skills-bitmoji-container:hover {
+    transform: rotate(5deg) scale(1.1);
+    /* Rotate and scale slightly on hover */
+}
+
+/* Card Hover Effect */
+.skills-card:hover {
+    animation: zoom 0.6s ease forwards;
+    /* Apply the zoom animation on hover */
+}
+
+/* List Container */
+.skills-description-card {
+    background: linear-gradient(to right, #d2ffff, #fcffe1, #fcffe1,#d2ffff);
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2rem;
+    height: 100px; /* Set a fixed height */
+    display: flex; 
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    text-align: center; /* Center text */
+}
+
+.description-section .col-6 {
+    flex: 1 1 45%; /* Equal size for each column */
+    max-width: 45%; /* Ensures columns stay equal width */
+    margin: 10px; /* Space between columns */
+}
+
+.skills-description-card:hover {
     transform: scale(1.05);
-    color: #3498db;  /* Change color on hover */
+    /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Larger shadow on hover */
 }
 
-/* Animation */
-@keyframes slideIn {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
+/* Keyframes for Zoom Animation */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        /* Start at original scale */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Scale up to 110% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to original scale */
+    }
+}
+
+/* Skills Title */
+.skills-title {
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make text bold */
+    background: #ef346c; /* Initial gradient */
+    background-clip: text !important; /* Clip background to the text */
+    -webkit-background-clip: text !important; /* For Safari */
+    color: transparent; /* Make the text color transparent */
+    animation: gradient-animation 3s ease infinite; /* Apply animation */
+    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5; /* Ensure good spacing */
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradient-animation {
+    0% {
+        background: #000000
+    }
+    25% {
+        background: hsl(0, 97%, 24%); 
+    }
+    50% {
+        background: #18018b
+    }
+    70% {
+        background: #4f012e
+    }
+    100% {
+        background: #185701
+    }
 }
