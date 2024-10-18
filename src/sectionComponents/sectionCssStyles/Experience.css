@@ -1,21 +1,174 @@
-.experience {
-    background-color: #fff1e6;
-    padding: 40px;
-    border-radius: 10px;
+/* experience Container */
+.experience-container {
+    display: flex;
+    justify-content: center;
+    /* Center the card horizontally */
+    margin: 1rem;
+    /* Use rem for responsive margin */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
-h2 {
-    color: #6d6875;
-    font-size: 2rem;
+/* Flex layout for the content */
+.experience-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    justify-content: space-between;
 }
 
-.job h3 {
-    color: #9a8c98;
-    font-size: 1.8rem;
+/* experience Card Style */
+.experience-card {
+    padding: 1rem;
+    /* Padding inside the card */
+    border-radius: 12px;
+    /* Rounded corners */
+    background: radial-gradient(circle,  #fdffdc,#fdffdc, #e6fee0, #e5ffef);
+    /* Fallback color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    width: 100%;
+    /* Full width for responsiveness */
+    max-width: 90%;
+    /* Limit the card width to maintain layout */
+    margin: 2rem auto;
+    /* Center the card with margins */
 }
 
-.job p {
+/* Bitmoji Section */
+.experience-bitmoji-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack title and Bitmoji vertically */
+    align-items: center;
+    /* Center align items */
+    width: 100%;
+    /* Full width for responsive layout */
+    max-width: 250px;
+    /* Set a max-width for the Bitmoji */
+    transition: transform 0.5s ease;
+    /* Smooth transition for animation */
+    margin-top: -30px;
+}
+
+/* Bitmoji GIF */
+.experience-bitmoji-gif {
+    width: 100%;
+    /* Make Bitmoji responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    animation: walk-animation 7s infinite;
+}
+
+/* Content Section */
+.content-section {
+    flex: 2;
+    /* 2/3 of the space */
+}
+
+/* Optional: Add a small animation to the Bitmoji */
+.experience-bitmoji-container:hover {
+    transform: rotate(-3deg) scale(1.1);
+    /* Rotate and scale slightly on hover */
+}
+
+/* List Container */
+.experience-description-card {
+    color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    display: flex; 
+    align-items: center; /* Vertically center text */
+    word-wrap: break-word; /* Ensure text wraps when shrinking */
+    padding: 1rem;
+}
+
+
+.panel-card:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Larger shadow on hover */
+}
+
+.panel-header{
+    padding: 1rem;
+    /* Padding inside the card */
+    background: linear-gradient(to right, #ffdefb, #fcffe1, #fcffe1,#ffdefb);
+    /* Fallback color */
     font-size: 1.1rem;
-    color: #555;
+    color:black
 }
 
+/* Keyframes for Zoom Animation */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        /* Start at original scale */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Scale up to 110% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to original scale */
+    }
+}
+
+/* experience Title */
+.experience-title {
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make text bold */
+    background: #ef346c; /* Initial gradient */
+    background-clip: text !important; /* Clip background to the text */
+    -webkit-background-clip: text !important; /* For Safari */
+    color: transparent; /* Make the text color transparent */
+    animation: text-animation 3s ease infinite; /* Apply animation */
+    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5; /* Ensure good spacing */
+}
+
+/* Keyframes for Text Animation */
+@keyframes text-animation {
+    0% {
+        background: #000000
+    }
+    25% {
+        background: hsl(0, 97%, 24%); 
+    }
+    50% {
+        background: #18018b
+    }
+    70% {
+        background: #4f012e
+    }
+    100% {
+        background: #185701
+    }
+}
+
+
+/* @keyframes slide-diagonal  {
+    0% { transform: translate(-15px, -15px); }   
+    25% { transform: translate(-35px, -35px); }   
+    50% { transform: translate(95px, 95px); }   
+    75% { transform: translate(-65px, -65px); }   
+    100% { transform: translate(-15px, -15px); } 
+} */
+
+@keyframes walk-animation {
+    0% { transform: translate(0, -10); opacity: 1; }            /* Start position, fully visible */
+    10% { transform: translate(20px, -10px); opacity: 1; }   /* Move forward and slightly up */
+    20% { transform: translate(40px, -10px); opacity: 1; }   /* Move forward and slightly up */
+    30% { transform: translate(60px, -10px); opacity: 1; }   /* Move forward and slightly up */
+    40% { transform: translate(80px, -10px); opacity: 1; }   /* Move further forward */
+    50% { transform: translate(100px, -10px); opacity: 1; }  /* Move forward and slightly down */
+    60% { transform: translate(120px, -10px); opacity: 1; }  /* Move forward and slightly down */
+    70% { transform: translate(140px, -10px); opacity: 1; }  
+    80% { transform: translate(160px, -10px); opacity: 1; }  
+    90% { transform: translate(180px, -10px); opacity: 1; }  
+    100% { transform: translate(0, -10); opacity: 0; }         /* Return to start position and fully invisible */
+}

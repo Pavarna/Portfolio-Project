@@ -26,7 +26,7 @@ const App: React.FC = () => {
         { label: 'Profile', icon: 'pi pi-book', command: () => scrollToSection(profileRef) },
         { label: 'Skills', icon: 'pi pi-book', command: () => scrollToSection(skillsRef) },
         { label: 'Experience', icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },
-        { label: 'Expertise', icon: 'pi pi-key', command: () => scrollToSection(expertiseRef) },
+        { label: 'Expertise', icon: 'pi pi-star', command: () => scrollToSection(expertiseRef) },
         { label: 'Awards', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
         { label: 'Contact', icon: 'pi pi-phone', command: () => scrollToSection(contactRef) }
     ];
@@ -35,7 +35,9 @@ const App: React.FC = () => {
         <Router>
             <div className="app">
                 {/* PrimeReact Menubar */}
-                <Menubar model={items} />
+                <div className="card">
+                    <Menubar model={items} />
+                </div>
 
                 {/* Pass section refs to Overview */}
                 <Overview

@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './sectionCssStyles/Skills.css';
 import BitmojiGIF from '../assets/images/Bitmoji look.png'; // Adjust the path to your GIF
 import { Card } from 'primereact/card'; // Import PrimeReact Card
+import ReactLogo from '../assets/images/React logo.png'; // Example logos
+// import GitLogo from '../assets/images/git-logo.png';
+// import DockerLogo from '../assets/images/docker-logo.png';
+
 
 const Skills: React.FC = () => {
     return (
@@ -9,16 +13,23 @@ const Skills: React.FC = () => {
             <Card className="skills-card">
                 {/* Title with Animation */}
                 <div className="skills-title-container flex-grow-4 flex align-items-center justify-content-center">
-
                     <h1 className="skills-title">
                         <div className='grid'>
-                            <span className="col-6 col-offset-4">Discover my superpowers!</span>
+                            <span className="col-6 col-offset-4 ">Discover my superpowers!</span>
                         </div>
                         <div className='grid'>
                             <span className="col-12">Frontend magic, UI/UX wizardry, DevOps mastery, and leadership expertise.</span>
                         </div>
                     </h1>
                 </div>
+                  {/* Technology Logos */}
+                  <div className="logo-container flex align-items-center justify-content-center">
+                    {/* <img src={ReactLogo} alt="React" className="tech-logo" /> */}
+                    {/* <img src={GitLogo} alt="Git" className="tech-logo" />
+                    <img src={DockerLogo} alt="Docker" className="tech-logo" /> */}
+                    {/* Add more logos as needed */}
+                </div>
+
                 <div className="flex skills-content align-items-stretch flex-wrap">
                     {/* Title with Animation and PrimeReact Cards for Each List Item */}
                     <div className="flex-grow-4 flex align-items-start justify-content-start content-section">
@@ -69,7 +80,7 @@ const Skills: React.FC = () => {
 
                     {/* Bitmoji on the right */}
                     <div className="flex-grow-2 flex skills-bitmoji-container">
-                        <img src={BitmojiGIF} alt="My Bitmoji" className="bitmoji-gif" />
+                        <img src={BitmojiGIF} alt="My Bitmoji" className="skills-bitmoji-gif" />
                     </div>
 
                 </div>

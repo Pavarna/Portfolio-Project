@@ -72,6 +72,7 @@
     /* Responsive */
     height: 500px;
     /* Maintain aspect ratio */
+    animation: subtle-shake 2.5s infinite /* Apply shaking animation */
 }
 
 /* Content Section */
@@ -98,13 +99,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    background: linear-gradient(to right, #d2ffff, #fcffe1, #fcffe1,#d2ffff); /* Gradient background */
+    background: linear-gradient(to right, #b6f7f7, #fcffe1, #fcffe1,#b6f7f7); /* Gradient background */
     color: black;
-    height: 100px; /* Set a fixed height */
+    min-height: 100px; /* Set min-height for flexibility */
     display: flex; 
     align-items: center; /* Vertically center text */
     justify-content: center; /* Horizontally center text */
     text-align: center; /* Center text */
+    word-wrap: break-word; /* Ensure text wraps when shrinking */
  }
 
 .description-card:hover {
@@ -112,18 +114,6 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
 }
 
-
-/* Keyframes for Bitmoji Fade-In and Scale-Up */
-@keyframes bitmoji-fade-in-scale-up {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 /* Keyframes for Card Fade-In from Bottom */
 @keyframes card-fade-in-bottom {
@@ -149,4 +139,9 @@
     }
 }
 
-
+/* Keyframe animation for shaking effect */
+@keyframes subtle-shake {
+    0% { transform:rotate(3deg) scale(1.1); }  
+    50% { transform: rotate(-3deg) scale(1.1);} 
+    100% { transform:rotate(3deg) scale(1.1); }  
+}

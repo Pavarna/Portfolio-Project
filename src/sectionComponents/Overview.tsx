@@ -11,7 +11,7 @@ import 'primeflex/primeflex.css';
 import Profile from './Profile';
 
 interface OverviewProps {
-    profileRef:React.RefObject<HTMLDivElement>;
+    profileRef: React.RefObject<HTMLDivElement>;
     skillsRef: React.RefObject<HTMLDivElement>;
     experienceRef: React.RefObject<HTMLDivElement>;
     expertiseRef: React.RefObject<HTMLDivElement>;
@@ -19,7 +19,7 @@ interface OverviewProps {
     contactRef: React.RefObject<HTMLDivElement>;
 }
 
-const Overview: React.FC<OverviewProps> = ({ profileRef,skillsRef, experienceRef, expertiseRef, awardsRef, contactRef }) => {
+const Overview: React.FC<OverviewProps> = ({ profileRef, skillsRef, experienceRef, expertiseRef, awardsRef, contactRef }) => {
     const roles = ["Frontend Developer", "ReactJs Developer", "Software Developer", "Educational YouTuber"]; // Array of roles
     const [role, setRole] = useState(roles[0]); // Initial role state
     const [index, setIndex] = useState(0); // Index for tracking current role
@@ -39,7 +39,7 @@ const Overview: React.FC<OverviewProps> = ({ profileRef,skillsRef, experienceRef
 
     return (
         <div className="overview-container">
-            {/* Profile Card */}           
+            {/* Profile Card */}
             <div className="profile-content" ref={profileRef}>
                 <Profile />
             </div>
@@ -48,18 +48,10 @@ const Overview: React.FC<OverviewProps> = ({ profileRef,skillsRef, experienceRef
                 <Skills />
             </div>
 
+            <div className="experience-content" ref={experienceRef}>
+                <Experience />
+            </div>
 
-            {/* Experience Card */}
-            <Card className="experience-card">
-                <div className="experience-content" ref={experienceRef}>
-                    <h2>Experience</h2>
-                    <Experience />
-                    {/* Bitmoji GIF for Experience */}
-                    <div className="bitmoji-container">
-                        <img src={BitmojiGIF} alt="My Bitmoji" className="bitmoji-gif" />
-                    </div>
-                </div>
-            </Card>
 
             {/* Expertise Card */}
             <Card className="expertise-card">

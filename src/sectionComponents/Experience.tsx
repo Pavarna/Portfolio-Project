@@ -1,37 +1,95 @@
 import React from 'react';
 import './sectionCssStyles/Experience.css';
+import { Card } from 'primereact/card';
+import BitmojiGIF from '../assets/images/Bitmoji going to work happy.png'
+import { Panel } from 'primereact/panel';
+import { Divider } from 'primereact/divider';
 
 const Experience: React.FC = () => {
-    return (
-        <section className="experience">
-            <h2>Work Experience</h2>
-            <div className="job">
-                <h3>DHL IT Services - Associate Software Engineering Analyst</h3>
-                <p>
-                    ✔Migrated legacy systems to modern ReactJS frameworks, ensuring 100% code
-                    compliance with security standards (Fortify), enhancing both security and
-                    maintainability.
-                    Successfully delivered 5 major web applications, independently managing the
-                    entire front-end lifecycle, from design to deployment.
-                    ✔ Implemented state management using Redux and Redux Saga, optimizing
-                    performance and user experience in high-traffic web applications.
-                    ✔ Leveraged GitHub Copilot and internal AI tools to boost development productivity by
-                    15%, aligning with the organization's technology standards.
-                    ✔ Collaborated with cross-functional teams, including designers, backend developers,
-                    and business stakeholders, resulting in a 20% improvement in project delivery times.
-                    ✔ Delivered development plans, unit tests, and deployments on schedule, showcasing
-                    strong organizational skills.
-                    ✔Contributed to DevSecOps efforts by completing development and support tasks promptly.
-                </p>
-                <p>
-                    Actively participated in organizing internal team events, fostering team spirit and enhancing collaboration.
-                    Led business communication meetings with stakeholders, improving project alignment and timely decision-making.
-                    Managed team Confluence tracker, ensuring up-to-date documentation of project progress, team structure, and decision logs.
-                    Oversaw leave tracking and eTime submission, ensuring smooth operational workflows within the team.
-                    Coordinated team structure updates, optimizing resource allocation and productivity within the department.
-                </p>
+
+
+    const headerTemplate = (options: any) => {
+        const className = `${options.className} justify-content-space-between panel-header`;
+        return (
+            <div className={className}>
+                <div className="flex align-items-center gap-2 font-bold">
+                    DHL IT Services
+                </div>
+                <div className="font-medium">
+                    2022 - Present
+                </div>
             </div>
-        </section>
+        );
+    };
+
+    return (
+        <div className="experience-container">
+            <Card className="experience-card">
+                {/* Title with Animation */}
+                <div className="experience-title-container flex-grow-4 flex align-items-center justify-content-center">
+                    <h1 className="experience-title">
+                        Professional Experiences
+                    </h1>
+                    <div className="flex-grow-2 flex experience-bitmoji-container">
+                        <img src={BitmojiGIF} alt="My Bitmoji" className="experience-bitmoji-gif" />
+                    </div>
+                </div>
+                <div className="flex experience-content align-items-stretch flex-wrap">
+                    {/* Title with Animation and PrimeReact Cards for Each List Item */}
+                    <div className="flex-grow-4 flex align-items-start justify-content-start content-section">
+                        {/* PrimeReact Cards for Each List Item */}
+                        <div className="grid">
+                            <div className="card">
+                                <Panel headerTemplate={headerTemplate} className='panel-card'>
+                                    <Divider align="left">
+                                        <div className="inline-flex align-items-center">
+                                            <i className="pi pi-code mr-2"></i>
+                                            <b>Frontend Development Responsiblities</b>
+                                        </div>
+                                    </Divider>
+                                    <p className="m-0 experience-description-card">
+                                        <ul>
+                                            <li>
+                                                ✔<b>Migrated legacy systems</b> to modern <b>ReactJS</b> frameworks, ensuring <b>100% code
+                                                    compliance</b> with security standards (Fortify), enhancing both <b>security and
+                                                        maintainability</b>.
+                                            </li>
+                                            <li>  ✔Successfully <b>delivered 5 major web applications, independently</b> managing the
+                                                <b>entire front-end lifecycle</b>, from design to deployment.</li>
+                                            <li> ✔Implemented <b>state management</b> using <b>Redux and Redux Saga</b>, optimizing
+                                                performance and user experience in high-traffic web applications.</li>
+                                            <li> ✔ Leveraged <b>GitHub Copilot</b> and <b>internal AI tools</b> to boost development productivity by
+                                                15%, aligning with the organization's technology standards.</li>
+                                            <li> ✔ Collaborated with <b>cross-functional teams</b>, including designers, backend developers,
+                                                and business stakeholders, resulting in a <b>20% improvement in project delivery times</b>.</li>
+                                            <li> ✔ Delivered development plans, unit tests, and deployments on <b>schedule</b>, showcasing
+                                                strong organizational skills.</li>
+                                            <li> ✔Contributed to DevSecOps efforts by completing <b>development and support tasks promptly</b>.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <Divider align="left">
+                                        <div className="inline-flex align-items-center">
+                                            <i className="pi pi-users mr-2"></i>
+                                            <b>Management & Communication Responsibilities</b>
+                                        </div>
+                                    </Divider>
+                                    <p className="m-0 experience-description-card">
+                                        <ul>
+                                            <li>  ✔  <b>Actively participated</b> in organizing internal team events, fostering <b>team spirit and enhancing collaboration</b>.</li>
+                                            <li>  ✔  Led <b>business communication meetings</b> with stakeholders, improving project alignment and <b>timely decision-making</b>. </li>
+                                            <li>  ✔  Oversaw leave tracking and eTime submission, <b>ensuring smooth operational</b> workflows within the team.</li>
+                                            <li>  ✔  Managed team Confluence tracker, <b>ensuring up-to-date documentation</b> of project progress, team structure, and decision logs.</li>
+                                            <li>  ✔  <b>Coordinated</b> team structure updates, optimizing resource allocation and productivity within the department. </li>
+                                        </ul>
+                                    </p>
+                                </Panel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Card>
+        </div>
     );
 };
 
