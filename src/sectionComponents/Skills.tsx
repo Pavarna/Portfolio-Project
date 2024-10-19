@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './sectionCssStyles/Skills.css';
 import BitmojiGIF from '../assets/images/Bitmoji look.png'; // Adjust the path to your GIF
 import { Card } from 'primereact/card'; // Import PrimeReact Card
-import ReactLogo from '../assets/images/React logo.png'; // Example logos
-// import GitLogo from '../assets/images/git-logo.png';
-// import DockerLogo from '../assets/images/docker-logo.png';
 
 
 const Skills: React.FC = () => {
@@ -21,13 +18,6 @@ const Skills: React.FC = () => {
                             <span className="col-12">Frontend magic, UI/UX wizardry, DevOps mastery, and leadership expertise.</span>
                         </div>
                     </h1>
-                </div>
-                  {/* Technology Logos */}
-                  <div className="logo-container flex align-items-center justify-content-center">
-                    {/* <img src={ReactLogo} alt="React" className="tech-logo" /> */}
-                    {/* <img src={GitLogo} alt="Git" className="tech-logo" />
-                    <img src={DockerLogo} alt="Docker" className="tech-logo" /> */}
-                    {/* Add more logos as needed */}
                 </div>
 
                 <div className="flex skills-content align-items-stretch flex-wrap">

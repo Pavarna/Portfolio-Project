@@ -1,15 +1,114 @@
-.awards {
-    background-color: #fff1e6;
-    padding: 40px;
-    border-radius: 10px;
+/* award Container */
+.award-container {
+    display: flex;
+    justify-content: center;
+    /* Center the card horizontally */
+    margin: 1rem;
+    /* Use rem for responsive margin */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    width: 100%;
+    padding: 1rem;
 }
 
-h2 {
-    color: #6d6875;
-    font-size: 2rem;
+/* award Card Style */
+.award-card {
+    padding: 1rem;
+    /* Padding inside the card */
+    border-radius: 12px;
+    /* Rounded corners */
+    background: radial-gradient(circle,  #ccf7fe,#e6fee0, #e6fee0, #f3d4ff);
+    /* Fallback color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    width: 100%;
+    /* Full width for responsiveness */
+    max-width: 90%;
+    /* Limit the card width to maintain layout */
+    margin: auto;
+    overflow: hidden; /* Prevent content overflow */
 }
 
-p {
-    font-size: 1.1rem;
-    color: #555;
+.image-size{
+    display: flex;
+    min-width: auto;
+}
+
+/* Gradient text for the legend */
+.title-text-color {
+    background: linear-gradient(to right, #6641f9,#fa078d, #9d069b, #f33d44); /* Define your gradient */
+    background-clip: text !important; /* Standard */
+    -webkit-background-clip: text !important; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for non-supporting browsers */
+    font-size: 1.2rem;
+}
+
+.text-container {
+    text-align: center; /* Center the text */
+    max-width: 100%; /* Reduce max-width to allow responsiveness */
+    word-wrap: break-word; /* Ensure long words wrap properly */
+    padding: 1rem; /* Add some padding for spacing */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.responsive-splitter .p-splitter-panel {
+    width: 100%; /* Ensure panels are responsive */
+}
+
+.text-panel {
+    flex: 1; /* Ensure the SplitterPanel takes available space */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Bitmoji Section */
+.awards-bitmoji-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack title and Bitmoji vertically */
+    align-items: center;
+    /* Center align items */
+    width: 100%;
+    /* Full width for responsive layout */
+    max-width: 400px;
+    /* Set a max-width for the Bitmoji */
+    transition: transform 0.5s ease;
+    /* Smooth transition for animation */
+    margin:auto;
+    /* Adjust as needed to lift Bitmoji up */
+    animation: up-down 15s infinite
+}
+
+/* Bitmoji GIF */
+.awards-bitmoji-gif {
+    width: 100%;
+    /* Make Bitmoji responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Flex layout for the content */
+.award-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    justify-content: space-between;
+}
+
+.responsive-fieldset {
+    max-width: 100%; /* Make sure fieldset fits within its container */
+    word-wrap: break-word; /* Ensure long words wrap */
+    overflow: hidden; /* Prevent overflow */
+}
+
+
+@keyframes up-down  {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-200px); }
+    45% { transform: translateY(80px); }
+    50% { transform: translateY(100px); }
+    65% { transform: translateY(-60px); }
+    85% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
 }

@@ -30,7 +30,7 @@
     /* Full width for responsiveness */
     max-width: 90%;
     /* Limit the card width to maintain layout */
-    margin: 2rem auto;
+    margin: 3rem auto;
     /* Center the card with margins */
 }
 
@@ -43,7 +43,7 @@
     /* Center align items */
     width: 100%;
     /* Full width for responsive layout */
-    max-width: 250px;
+    max-width: 150px;
     /* Set a max-width for the Bitmoji */
     transition: transform 0.5s ease;
     /* Smooth transition for animation */
@@ -80,14 +80,21 @@
     align-items: center; /* Vertically center text */
     word-wrap: break-word; /* Ensure text wraps when shrinking */
     padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
-.panel-card:hover {
+.experience-description-card:hover {
     transform: scale(1.05);
     /* Slight zoom effect on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Larger shadow on hover */
+}
+
+.panel-card {
+    padding:3rem;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
 }
 
 .panel-header{
@@ -150,25 +157,41 @@
     }
 }
 
+/* Style for the custom list */
+.custom-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;           /* Remove default padding */
+}
 
-/* @keyframes slide-diagonal  {
-    0% { transform: translate(-15px, -15px); }   
-    25% { transform: translate(-35px, -35px); }   
-    50% { transform: translate(95px, 95px); }   
-    75% { transform: translate(-65px, -65px); }   
-    100% { transform: translate(-15px, -15px); } 
-} */
+.custom-list li {
+    padding-left: 20px;  /* Space for the tick mark */
+}
+
+.custom-list li::before {
+    content: '✔';        /* Custom tick mark */
+    left: 0;             /* Align to the left */
+}
 
 @keyframes walk-animation {
-    0% { transform: translate(0, -10); opacity: 1; }            /* Start position, fully visible */
-    10% { transform: translate(20px, -10px); opacity: 1; }   /* Move forward and slightly up */
-    20% { transform: translate(40px, -10px); opacity: 1; }   /* Move forward and slightly up */
-    30% { transform: translate(60px, -10px); opacity: 1; }   /* Move forward and slightly up */
-    40% { transform: translate(80px, -10px); opacity: 1; }   /* Move further forward */
-    50% { transform: translate(100px, -10px); opacity: 1; }  /* Move forward and slightly down */
-    60% { transform: translate(120px, -10px); opacity: 1; }  /* Move forward and slightly down */
-    70% { transform: translate(140px, -10px); opacity: 1; }  
-    80% { transform: translate(160px, -10px); opacity: 1; }  
-    90% { transform: translate(180px, -10px); opacity: 1; }  
-    100% { transform: translate(0, -10); opacity: 0; }         /* Return to start position and fully invisible */
+    0% { transform: translate(0, -10px); opacity: 1; }            /* Start position, fully visible */
+    5% { transform: translate(10px, -10px); opacity: 1; }         /* Move forward slightly */
+    10% { transform: translate(20px, -10px); opacity: 1; }        /* Move forward slightly */
+    15% { transform: translate(30px, -10px); opacity: 1; }        /* Move forward slightly */
+    20% { transform: translate(40px, -10px); opacity: 1; }        /* Move forward slightly */
+    25% { transform: translate(50px, -10px); opacity: 1; }        /* Move forward slightly */
+    30% { transform: translate(60px, -10px); opacity: 1; }        /* Move forward slightly */
+    35% { transform: translate(70px, -10px); opacity: 1; }        /* Move forward slightly */
+    40% { transform: translate(80px, -10px); opacity: 1; }        /* Move forward slightly */
+    45% { transform: translate(90px, -10px); opacity: 1; }        /* Move forward slightly */
+    50% { transform: translate(100px, -10px); opacity: 1; }       /* Move forward slightly */
+    55% { transform: translate(110px, -10px); opacity: 1; }       /* Move forward slightly */
+    60% { transform: translate(120px, -10px); opacity: 1; }       /* Move forward slightly */
+    65% { transform: translate(130px, -10px); opacity: 1; }       /* Move forward slightly */
+    70% { transform: translate(140px, -10px); opacity: 1; }       /* Move forward slightly */
+    75% { transform: translate(150px, -10px); opacity: 1; }       /* Move forward slightly */
+    80% { transform: translate(160px, -10px); opacity: 1; }       /* Move forward slightly */
+    85% { transform: translate(170px, -10px); opacity: 1; }       /* Move forward slightly */
+    90% { transform: translate(280px, -10px); opacity: 1; }       /* Move forward slightly */
+    95% { transform: translate(280px, -10px); opacity: 0; }       /* Fade out */
+    100% { transform: translate(0, -10px); opacity: 0; }          /* Return to start position and fully invisible */
 }

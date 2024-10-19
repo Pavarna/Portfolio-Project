@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'primereact/card'; // Import PrimeReact Card
-import BitmojiGIF from '../assets/images/Bitmoji from alptop.png'; // Adjust the path to your GIF
+import BitmojiGIF from '../assets/images/Bitmoji from laptop.png'; // Adjust the path to your GIF
 import './sectionCssStyles/Profile.css'; // Import your custom styles
 import 'primeflex/primeflex.css';
 
