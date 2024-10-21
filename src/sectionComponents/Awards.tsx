@@ -27,8 +27,12 @@ const Awards: React.FC = () => {
                             <Fieldset legend={<span className="title-text-color">Awards</span>} className="responsive-fieldset">
                                 <p className="m-0">
                                     <h2 className="title-text-color">Very Special Achievement Award (VESPAA)</h2>
-                                    Awarded for outstanding dedication and leadership as the SME and Technical Lead for the key application. Successfully ensured all releases in 2023 and Q1-2024 were delivered on time and with high quality, without any stakeholder escalations.
+                                    Awarded for outstanding dedication and leadership as the SME and Technical Lead for the key application in DHL IT Services. Successfully ensured all releases in 2023 and Q1-2024 were delivered on time and with high quality, without any stakeholder escalations.
                                 </p>
+                                <Divider align="center"></Divider>
+                                <p className="m-0">
+                                    <h2 className="title-text-color">Gold Medalist - First Rank Holder</h2>
+                                    I am a proud gold medalist and 1st rank holder in BSc Computer Technology from Bharathiar University, which has over 100 affiliated colleges. This prestigious achievement highlights my academic excellence and dedication in a highly competitive environment.                                </p>
                             </Fieldset>
 
                             <Divider align="center"></Divider>
@@ -43,7 +47,7 @@ const Awards: React.FC = () => {
                                                 <div className="card">
                                                     <h4 className='flex align-items-center justify-content-center'>Certificate</h4>
                                                     <Image src={metaCertificate} zoomSrc={metaCertificate} alt="Meta Frontend Specialization Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
-                                                    <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span> Click on the image to zoom</h6>
+                                                    <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span>Click on the image</h6>
                                                 </div>
                                             </SplitterPanel>
                                             <SplitterPanel className="flex align-items-center justify-content-center" size={85}>
@@ -72,7 +76,7 @@ const Awards: React.FC = () => {
                                                 <div className="card">
                                                     <h4 className='flex align-items-center justify-content-center'>Certificate</h4>
                                                     <Image src={IBMCertificate} zoomSrc={IBMCertificate} alt="IBM Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
-                                                    <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span> Click on the image to zoom</h6>
+                                                    <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span> Click on the image</h6>
                                                 </div>
                                             </SplitterPanel>
                                             <SplitterPanel className="flex text-panel align-items-center justify-content-center" size={85}>

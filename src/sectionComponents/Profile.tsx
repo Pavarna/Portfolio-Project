@@ -62,10 +62,14 @@ const Profile: React.FC = () => {
                                         Experienced in working <b>solely on the UI, taking full ownership</b> of the front-end development lifecycle.
                                     </Card>
                                 </div>
-                                <div className="col-6  col-offset-3">
+                                <div className="col-6">
                                     <Card className="description-card">
                                         Proven track record of building responsive, user-friendly web applications within timelines that meet business objectives while ensuring <b>code quality, security, and scalability</b>.
                                     </Card>
+                                </div>
+                                <div className="col-6">
+                                    <Card className="description-card">
+                                    YT channel with 20k+ subscribers, <b>sharing free courses, internships, & masterclasses</b> in Tamil, making career opportunities accessible for non-English speakers.                                    </Card>
                                 </div>
                             </div>
                         </div>

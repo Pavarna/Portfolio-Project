@@ -12,12 +12,11 @@ interface OverviewProps {
     skillsRef: React.RefObject<HTMLDivElement>;
     experienceRef: React.RefObject<HTMLDivElement>;
     awardsRef: React.RefObject<HTMLDivElement>;
+    projectRef: React.RefObject<HTMLDivElement>;
     contactRef: React.RefObject<HTMLDivElement>;
 }
 
-const Overview: React.FC<OverviewProps> = ({ profileRef, skillsRef, experienceRef, awardsRef, contactRef }) => {
-    const bitmojiRef = useRef<HTMLDivElement | null>(null); // Bitmoji reference
-    const [bitmojiVisible, setBitmojiVisible] = useState(false); // Track if Bitmoji is visible
+const Overview: React.FC<OverviewProps> = ({ profileRef, skillsRef, experienceRef, awardsRef,projectRef, contactRef }) => {
 
     return (
         <div className="overview-container">
@@ -36,6 +35,10 @@ const Overview: React.FC<OverviewProps> = ({ profileRef, skillsRef, experienceRe
 
             <div className="awards-content" ref={awardsRef}>
                 <Awards />
+            </div>
+
+            <div className="awards-content" ref={projectRef}>
+                {/* <Awards /> */}
             </div>
 
             <div className="contact-content" ref={contactRef}>

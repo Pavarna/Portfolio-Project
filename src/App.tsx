@@ -12,6 +12,7 @@ const App: React.FC = () => {
     const profileRef = useRef<null | HTMLDivElement>(null);
     const experienceRef = useRef<null | HTMLDivElement>(null);
     const awardsRef = useRef<null | HTMLDivElement>(null);
+    const projectRef = useRef<null | HTMLDivElement>(null);
     const contactRef = useRef<null | HTMLDivElement>(null);
 
     const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         { label: 'Skills', icon: 'pi pi-book', command: () => scrollToSection(skillsRef) },
         { label: 'Experience', icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },
         { label: 'Awards', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
+        { label: 'Projects', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
         { label: 'Contact', icon: 'pi pi-phone', command: () => scrollToSection(contactRef) }
     ];
 
@@ -43,6 +45,7 @@ const App: React.FC = () => {
                     skillsRef={skillsRef}
                     experienceRef={experienceRef}
                     awardsRef={awardsRef}
+                    projectRef={projectRef}
                     contactRef={contactRef}
                 />
             </div>

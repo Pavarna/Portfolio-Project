@@ -3,7 +3,6 @@ import './sectionCssStyles/Skills.css';
 import BitmojiGIF from '../assets/images/Bitmoji look.png'; // Adjust the path to your GIF
 import { Card } from 'primereact/card'; // Import PrimeReact Card
 
-
 const Skills: React.FC = () => {
     return (
         <div className="skills-container">
@@ -62,7 +61,7 @@ const Skills: React.FC = () => {
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b> Business & Team Management: </b>Event Organization, Confluence Tracker, Leave Tracker, eTime Submission, Team Structure Management
+                                    <b> Business & Team Management: </b>Event Organization, Confluence, etime & Leave Tracker, Team Structure Management
                                 </Card>
                             </div>
                         </div>

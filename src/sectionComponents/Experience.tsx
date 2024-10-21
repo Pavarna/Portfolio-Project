@@ -1,7 +1,7 @@
 import React from 'react';
 import './sectionCssStyles/Experience.css';
 import { Card } from 'primereact/card';
-import BitmojiGIF from '../assets/images/Bitmoji going to work happy.png'
+import BitmojiGIF from '../assets/images/Bitmoji study check box.png'
 import { Panel } from 'primereact/panel';
 import { Divider } from 'primereact/divider';
 
@@ -30,11 +30,12 @@ const Experience: React.FC = () => {
                         Professional Experiences
                     </h1>
                 </div>
-                <div className="flex-grow-2 flex experience-bitmoji-container">
-                    <img src={BitmojiGIF} alt="My Bitmoji" className="experience-bitmoji-gif" />
-                </div>
-                <div className="flex experience-content align-items-stretch flex-wrap">
-                    {/* Title with Animation and PrimeReact Cards for Each List Item */}
+                <div className="flex experience-content align-items-stretch flex-wrap">                 
+                    {/* Bitmoji on the right */}
+                    <div className="flex-grow-2 flex experience-bitmoji-container">
+                        <img src={BitmojiGIF} alt="My Bitmoji" className="experience-bitmoji-gif" />
+                    </div>
+                     {/* Title with Animation and PrimeReact Cards for Each List Item */}
                     <div className="flex-grow-4 flex align-items-start justify-content-start content-section">
                         {/* PrimeReact Cards for Each List Item */}
                         <div className="grid">
