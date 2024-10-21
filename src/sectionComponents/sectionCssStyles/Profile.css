@@ -1,78 +1,77 @@
-/* Overview Container */
-.overview-container {
+/* Projects Container */
+.projects-container {
     display: flex;
-    flex-direction: column;
-    margin: 5px;
-    /* Margin around the container */
+    justify-content: center;
+    /* Center the card horizontally */
+    margin: 1rem;
+    /* Use rem for responsive margin */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
-/* Overview Card Style */
-.overview-card {
+
+/* Projects Title */
+.projects-title {
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make text bold */
+    background: #ef346c; /* Initial gradient */
+    background-clip: text !important; /* Clip background to the text */
+    -webkit-background-clip: text !important; /* For Safari */
+    color: transparent; /* Make the text color transparent */
+    animation: text-animation 3s ease infinite; /* Apply animation */
+    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5; /* Ensure good spacing */
+}
+
+
+/* Projects Card Style */
+.projects-card {
     padding: 1rem;
     /* Padding inside the card */
     border-radius: 12px;
     /* Rounded corners */
-    background: #e8feff;
-    /* Fallback color */
     background: linear-gradient(to right, #fbfed1, #ffffff, #dbffcb);
+    /* Fallback color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    width: 100%;
+    /* Full width for responsiveness */
+    max-width: 90%;
+    /* Limit the card width to maintain layout */
     margin: 3rem auto;
-    width: 100%; /* Full width for responsiveness */
-    animation: card-fade-in-bottom 1s ease forwards; /* Fade-In from bottom for cards */
+    /* Center the card with margins */
 }
 
-/* Title Style */
-.overview-title {
-    margin: 0;
-    /* Remove margin below the title */
-    text-align: center;
-    /* Center the title */
-    font-size: 1.3rem;
-    color: black;
-    animation: title-slide-in 1.5s ease forwards; /* Slide-In from the left for title */
-    margin-top: -40px; /* Lift Bitmoji up by 20px (adjust as needed) */
-}
-
-.overview-title-role{
-    background: linear-gradient(to right, #ef346c, #ff1bfb, #4a26ff); /* Gradient background */
-    background-clip: text; /* Standard */
-    -webkit-background-clip: text; /* For Safari */
-    -webkit-text-fill-color: transparent; /* For Safari */
-    color: transparent; /* Fallback for non-supporting browsers */  padding: 20px;
-    width: auto; /* Let the card adjust its size, but it won't shrink */
-    min-width: 300px; /* You can adjust the min-width of the card as necessary */
-    text-align: center;
-}
-
-.description-section .col-6 {
-    flex: 1 1 45%; /* Equal size for each column */
-    max-width: 45%; /* Ensures columns stay equal width */
-    margin: 10px; /* Space between columns */
-}
-
-/* Optional: Adjust the font size of the animated part */
-.overview-title-h2 {
-    margin-left: 10px; /* Space between "Pavarna -" and animated text */
-    font-size: inherit; /* Ensure the font size matches */
-    line-height: inherit; /* Match the line height */
+/* Card Hover Effect */
+.projects-card:hover {
+    animation: zoom 0.6s ease forwards;
+    /* Apply the zoom animation on hover */
 }
 
 /* Bitmoji Section */
-.bitmoji-container {
+.projects-bitmoji-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack title and Bitmoji vertically */
+    align-items: center;
+    /* Center align items */
     width: 100%;
-    max-width: 450px; /* Fixed width for Bitmoji */
-    transition: transform 0.5s ease; /* Smooth transition for animation */
-    margin-top: -80px; /* Lift Bitmoji up by 20px (adjust as needed) */
+    /* Full width for responsive layout */
+    max-width: 400px;
+    /* Set a max-width for the Bitmoji */
+    transition: transform 0.5s ease;
+    /* Smooth transition for animation */
+    margin-top: -20px;
+    /* Adjust as needed to lift Bitmoji up */
 }
 
-
 /* Bitmoji GIF */
-.bitmoji-gif {
+.projects-bitmoji-gif {
     width: 100%;
-    /* Responsive */
-    height: 500px;
+    /* Make Bitmoji responsive */
+    height: auto;
     /* Maintain aspect ratio */
-    animation: subtle-shake 2.5s infinite /* Apply shaking animation */
+    animation: move-left-right 2.5s infinite 
 }
 
 /* Content Section */
@@ -82,66 +81,65 @@
 }
 
 /* Optional: Add a small animation to the Bitmoji */
-.bitmoji-container:hover {
+.projects-bitmoji-containers:hover {
     transform: rotate(5deg) scale(1.1);
     /* Rotate and scale slightly on hover */
 }
 
-/* Card Hover Effect */
-.overview-card:hover {
-    transform: scale(1.02);
-    /* Scale up slightly on hover */
-    transition: transform 0.3s ease;
-}
-
-/* List Container */
-.description-card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    background: linear-gradient(to right, #b6f7f7, #fcffe1, #fcffe1,#b6f7f7); /* Gradient background */
-    color: black;
-    min-height: 100px; /* Set min-height for flexibility */
-    display: flex; 
-    align-items: center; /* Vertically center text */
-    justify-content: center; /* Horizontally center text */
-    text-align: center; /* Center text */
-    word-wrap: break-word; /* Ensure text wraps when shrinking */
- }
-
-.description-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
-}
-
-
-/* Keyframes for Card Fade-In from Bottom */
-@keyframes card-fade-in-bottom {
+/* Keyframes for Zoom Animation */
+@keyframes zoom {
     0% {
-        opacity: 0;
-        transform: translateY(30px);
+        transform: scale(1);
+        /* Start at original scale */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Scale up to 110% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to original scale */
+    }
+}
+
+/* Projects Title */
+.Projects-title {
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make text bold */
+    background: #ef346c; /* Initial gradient */
+    background-clip: text !important; /* Clip background to the text */
+    -webkit-background-clip: text !important; /* For Safari */
+    color: transparent; /* Make the text color transparent */
+    animation: text-animation 3s ease infinite; /* Apply animation */
+    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5; /* Ensure good spacing */
+}
+
+/* Keyframes for Text Animation */
+@keyframes text-animation {
+    0% {
+        background: #000000
+    }
+    25% {
+        background: hsl(0, 97%, 24%); 
+    }
+    50% {
+        background: #18018b
+    }
+    70% {
+        background: #4f012e
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Keyframes for Title Slide-In */
-@keyframes title-slide-in {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+        background: #185701
     }
 }
 
 /* Keyframe animation for shaking effect */
-@keyframes subtle-shake {
-    0% { transform:rotate(3deg) scale(1.1); }  
-    50% { transform: rotate(-3deg) scale(1.1);} 
-    100% { transform:rotate(3deg) scale(1.1); }  
+@keyframes move-left-right {
+    0% { transform: translateX(15px); }   /* Start slightly to the right */
+    50% { transform: translateX(-15px); }  /* Move slightly to the left */
+    100% { transform: translateX(15px); }   /* Return to the starting position */
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './sectionCssStyles/Skills.css';
 import BitmojiGIF from '../assets/images/Bitmoji look.png'; // Adjust the path to your GIF
 import { Card } from 'primereact/card'; // Import PrimeReact Card

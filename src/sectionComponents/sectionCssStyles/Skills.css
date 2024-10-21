@@ -6,6 +6,7 @@
     margin: 1rem;
     /* Use rem for responsive margin */
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    width: 100%;
 }
 
 /* Flex layout for the content */

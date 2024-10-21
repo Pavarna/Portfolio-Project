@@ -25,9 +25,9 @@ const App: React.FC = () => {
     const items = [
         { label: 'Profile', icon: 'pi pi-book', command: () => scrollToSection(profileRef) },
         { label: 'Skills', icon: 'pi pi-book', command: () => scrollToSection(skillsRef) },
-        { label: 'Experience', icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },
+        { label: 'Experience', icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },     
+        { label: 'Projects', icon: 'pi pi-github', command: () => scrollToSection(projectRef) },
         { label: 'Awards', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
-        { label: 'Projects', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
         { label: 'Contact', icon: 'pi pi-phone', command: () => scrollToSection(contactRef) }
     ];
 
