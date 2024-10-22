@@ -1,95 +1,70 @@
-/* Skills Container */
+/* Projects Container */
 .projects-container {
     display: flex;
     justify-content: center;
-    /* Center the card horizontally */
+    align-items: stretch; /* Stretch items to the same height */
     margin: 1rem;
-    /* Use rem for responsive margin */
     flex-wrap: wrap;
-    /* Ensure items wrap on smaller screens */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the element’s width */
 }
 
 
-/* Skills Card Style */
+/* Projects Card Style */
 .projects-card {
     padding: 1rem;
-    /* Padding inside the card */
     border-radius: 12px;
-    /* Rounded corners */
     background: linear-gradient(to right, #c7e7ff, #fafffb, #fdeaf0);
-    /* Fallback color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow for depth */
     width: 100%;
-    /* Full width for responsiveness */
     max-width: 90%;
-    /* Limit the card width to maintain layout */
     margin: 3rem auto;
-    /* Center the card with margins */
+    box-sizing: border-box; /* Include padding and border in width */
+    overflow: hidden; /* Prevent overflow */
 }
-
 
 /* Bitmoji Section */
 .projects-bitmoji-container {
     display: flex;
     flex-direction: column;
-    /* Stack title and Bitmoji vertically */
     align-items: center;
-    /* Center align items */
     width: 100%;
-    /* Full width for responsive layout */
     max-width: 400px;
-    /* Set a max-width for the Bitmoji */
     transition: transform 0.5s ease;
-    /* Smooth transition for animation */
     margin-top: -20px;
-    /* Adjust as needed to lift Bitmoji up */
 }
 
 /* Bitmoji GIF */
 .projects-bitmoji-gif {
     width: 100%;
-    /* Make Bitmoji responsive */
     height: auto;
-    /* Maintain aspect ratio */
-    animation: move-left-right 2.5s infinite
+    animation: move-left-right 2.5s infinite;
 }
 
 /* Content Section */
 .content-section {
-    flex: 2; /* Ensure content-section takes available space */
+    flex: 2;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping of content */
-    justify-content: space-between; /* Ensure proper spacing between items */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
-/* Optional: Add a small animation to the Bitmoji */
-.projects-bitmoji-container:hover {
-    transform: rotate(5deg) scale(1.1);
-    /* Rotate and scale slightly on hover */
-}
 
-/* projects Title */
+/* Projects Title */
 .projects-title {
     font-size: 2rem;
-    /* Adjust the font size as needed */
     font-weight: bold;
-    /* Make text bold */
     background: #ef346c;
-    /* Initial gradient */
     background-clip: text !important;
-    /* Clip background to the text */
     -webkit-background-clip: text !important;
-    /* For Safari */
     color: transparent;
-    /* Make the text color transparent */
     animation: text-animation 3s ease infinite;
-    /* Apply animation */
     background-size: 200% 100%;
-    /* Ensure the gradient covers the text properly */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.5;
-    /* Ensure good spacing */
+    text-align: center;
+    margin: 0;
 }
 
 .description-section .col-6 {
@@ -101,18 +76,40 @@
     /* Space between columns */
 }
 
+/* Button Group */
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* Space between buttons */
+    gap: 1rem;
     justify-content: center;
+    padding: 0.5rem; /* Padding to avoid overflow */
 }
 
+/* Button Styles */
+.button-group button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for transform and box-shadow */
+}
+
+/* Hover Effect */
+.button-group button:hover {
+    transform: scale(1.1); /* Scale up by 10% */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Project Image */
 .projects-img {
     width: 100%;
     height: auto;
     object-fit: fill;
     padding: 0.5rem;
+    box-sizing: border-box; /* Include padding in the element's width */
+}
+
+
+/* Hover Effect */
+.projects-img:hover {
+    transform: scale(1.1); /* Scale up by 10% */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 /* Ensure the text inside the card wraps and doesn't overflow */
@@ -122,44 +119,35 @@
     max-width: 100%;
 }
 
-/* Keyframes for Text Animation */
-@keyframes text-animation {
-    0% {
-        background: #000000
-    }
-
-    25% {
-        background: hsl(0, 97%, 24%);
-    }
-
-    50% {
-        background: #18018b
-    }
-
-    70% {
-        background: #4f012e
-    }
-
-    100% {
-        background: #185701
-    }
+/* Card wrapper */
+.card {
+    display: flex; 
+    justify-content: center; /* Center the card itself */
+    align-items: center; /* Center items within the card vertically */
+    width: 100%; /* Optional: Set to take the full width of the flex item */
 }
 
-/* Keyframe animation for shaking effect */
+
+/* Text Animation Keyframes */
+@keyframes text-animation {
+    0% { background: #000000; }
+    25% { background: hsl(0, 97%, 24%); }
+    50% { background: #18018b; }
+    70% { background: #4f012e; }
+    100% { background: #185701; }
+}
+
+/* Move Left-Right Animation */
 @keyframes move-left-right {
-    0% {
-        transform: translateX(15px);
-    }
+    0% { transform: translateX(15px); }
+    50% { transform: translateX(-15px); }
+    100% { transform: translateX(15px); }
+}
 
-    /* Start slightly to the right */
-    50% {
-        transform: translateX(-15px);
-    }
-
-    /* Move slightly to the left */
-    100% {
-        transform: translateX(15px);
-    }
-
-    /* Return to the starting position */
+.projects-bitmoji-container:hover {
+    -webkit-transform: rotate(5deg) scale(1.1); /* Safari and older versions of Chrome */
+    -moz-transform: rotate(5deg) scale(1.1); /* Firefox */
+    -ms-transform: rotate(5deg) scale(1.1); /* Internet Explorer 9 */
+    -o-transform: rotate(5deg) scale(1.1); /* Opera */
+    transform: rotate(5deg) scale(1.1); /* Standard */
 }

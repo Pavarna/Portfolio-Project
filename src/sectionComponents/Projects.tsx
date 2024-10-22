@@ -29,9 +29,9 @@ const Projects: React.FC = () => {
               
                 <div className="flex projects-content align-items-stretch flex-wrap">
                     {/* Title with Animation and PrimeReact Cards for Each List Item */}
-                    <div className="flex-grow-4 flex align-items-start justify-content-start content-section">
+                    <div className="flex-grow-4 flex align-items-center justify-content-start content-section">
                         {/* PrimeReact Cards for Each List Item */}
-                        <div className="card flex col-offset-2 justify-content-center">
+                        <div className="card flex justify-content-center">
                             <Card title="Portfolio - Frontend Project" footer={footer} header={header} className="md:w-29rem">
                                 <div className='button-group'>
                                     <Button label="ReactJs" outlined />

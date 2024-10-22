@@ -1,188 +1,217 @@
-/* experience Container */
+/* Experience Container */
 .experience-container {
     display: flex;
     justify-content: center;
-    /* Center the card horizontally */
-    margin: 1rem;
-    /* Use rem for responsive margin */
+    margin: 1rem; /* Use rem for responsive margin */
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
     width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
 }
 
 /* Flex layout for the content */
 .experience-content {
     display: flex;
     flex-wrap: wrap;
-    /* Allow items to wrap */
     justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* experience Card Style */
+/* Experience Card Style */
 .experience-card {
     padding: 1rem;
-    /* Padding inside the card */
     border-radius: 12px;
-    /* Rounded corners */
-    background: radial-gradient(circle,  #fdffdc,#fdffdc, #e6fee0, #e5ffef);
-    /* Fallback color */
+    background: radial-gradient(circle, #fdffdc, #fdffdc, #e6fee0, #e5ffef);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow for depth */
     width: 100%;
-    /* Full width for responsiveness */
     max-width: 90%;
-    /* Limit the card width to maintain layout */
     margin: 3rem auto;
-    /* Center the card with margins */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content overflow */
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Vendor prefix for Safari/older browsers */
 }
 
 /* Bitmoji Section */
 .experience-bitmoji-container {
     display: flex;
     flex-direction: column;
-    /* Stack title and Bitmoji vertically */
     align-items: center;
-    /* Center align items */
     width: 100%;
-    /* Full width for responsive layout */
     max-width: 400px;
-    /* Set a max-width for the Bitmoji */
+    transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
-    /* Smooth transition for animation */
-    margin:auto;
+    margin: auto;
     margin-top: 80px;
+    box-sizing: border-box;
 }
 
 /* Bitmoji GIF */
 .experience-bitmoji-gif {
     width: 100%;
-    /* Make Bitmoji responsive */
     height: auto;
-    animation: zoom-in-out 5s ease-in-out infinite; 
+    animation: zoom-in-out 5s ease-in-out infinite;
 }
 
 /* Content Section */
 .content-section {
     flex: 2;
-    /* 2/3 of the space */
+    box-sizing: border-box;
 }
 
 /* Optional: Add a small animation to the Bitmoji */
 .experience-bitmoji-container:hover {
+    -webkit-transform: rotate(-3deg) scale(1.1);
     transform: rotate(-3deg) scale(1.1);
-    /* Rotate and scale slightly on hover */
 }
 
 /* List Container */
 .experience-description-card {
     color: black;
+    transition: -webkit-transform 0.3s ease, box-shadow 0.3s ease;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1rem;
-    display: flex; 
-    justify-content: center; /* Horizontally center text */
-    align-items: center; /* Vertically center text */
-    word-wrap: break-word; /* Ensure text wraps when shrinking */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
-
 
 .experience-description-card:hover {
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
-    /* Slight zoom effect on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Larger shadow on hover */
 }
 
+/* Panel Style */
 .panel-card {
-    padding:3rem;
-    align-items: center; /* Vertically center text */
-    justify-content: center; /* Horizontally center text */
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
-.panel-header{
+.panel-header {
     padding: 1rem;
-    /* Padding inside the card */
-    background: linear-gradient(to right, #ffdefb, #fcffe1, #fcffe1,#ffdefb);
-    /* Fallback color */
+    background: linear-gradient(to right, #ffdefb, #fcffe1, #fcffe1, #ffdefb);
     font-size: 1.1rem;
-    color:black
+    color: black;
 }
 
 /* Keyframes for Zoom Animation */
+@-webkit-keyframes zoom {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
 @keyframes zoom {
     0% {
         transform: scale(1);
-        /* Start at original scale */
     }
-
     50% {
         transform: scale(1.1);
-        /* Scale up to 110% */
     }
-
     100% {
         transform: scale(1);
-        /* Return to original scale */
     }
 }
 
-/* experience Title */
+/* Experience Title */
 .experience-title {
-    font-size: 2rem; /* Adjust the font size as needed */
-    font-weight: bold; /* Make text bold */
-    background: #ef346c; /* Initial gradient */
-    background-clip: text !important; /* Clip background to the text */
-    -webkit-background-clip: text !important; /* For Safari */
-    color: transparent; /* Make the text color transparent */
-    animation: text-animation 3s ease infinite; /* Apply animation */
-    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 1.5; /* Ensure good spacing */
+    font-size: 2rem;
+    font-weight: bold;
+    background: #ef346c;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent;
+    animation: text-animation 3s ease infinite;
+    background-size: 200% 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
 }
 
 /* Keyframes for Text Animation */
-@keyframes text-animation {
+@-webkit-keyframes text-animation {
     0% {
-        background: #000000
+        background: #000000;
     }
     25% {
-        background: hsl(0, 97%, 24%); 
+        background: hsl(0, 97%, 24%);
     }
     50% {
-        background: #18018b
+        background: #18018b;
     }
     70% {
-        background: #4f012e
+        background: #4f012e;
     }
     100% {
-        background: #185701
+        background: #185701;
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        background: #000000;
+    }
+    25% {
+        background: hsl(0, 97%, 24%);
+    }
+    50% {
+        background: #18018b;
+    }
+    70% {
+        background: #4f012e;
+    }
+    100% {
+        background: #185701;
+    }
+}
+
+/* Keyframes for Zoom-In-Out Animation */
+@-webkit-keyframes zoom-in-out {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
     }
 }
 
 @keyframes zoom-in-out {
     0% {
-        transform: scale(1); /* Initial size */
+        transform: scale(1);
     }
     50% {
-        transform: scale(1.2); /* Zoom in */
+        transform: scale(1.2);
     }
     100% {
-        transform: scale(1); /* Zoom out */
+        transform: scale(1);
     }
 }
-
 
 /* Style for the custom list */
 .custom-list {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0;           /* Remove default padding */
+    list-style-type: none;
+    padding: 0;
 }
 
 .custom-list li {
-    padding-left: 20px;  /* Space for the tick mark */
+    padding-left: 20px;
 }
 
 .custom-list li::before {
-    content: '✔';        /* Custom tick mark */
-    left: 0;             /* Align to the left */
+    content: '✔';
+    left: 0;
 }

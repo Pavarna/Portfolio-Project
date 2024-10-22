@@ -1,70 +1,75 @@
-.contact-section {
-    background-color: #f7f7f7;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-h2 {
-    color: #6d6875;  /* Muted pastel purple */
-    margin-bottom: 20px;
-}
-
-.contact-details {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-.contact-details p {
-    margin: 10px 0;
-}
-
-.contact-details a {
-    color: #3498db;  /* Soft pastel blue for links */
-    text-decoration: none;
-}
-
-.contact-details a:hover {
-    color: #6495ed;  /* Darker blue on hover */
-    text-decoration: underline;
-}
-
-.contact-container{
+.contact-container {
     display: flex;
     justify-content: center;
-    /* Center the card horizontally */
     margin: 1rem;
-    /* Use rem for responsive margin */
-    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
-.contact-card{
+.contact-card {
     padding: 1rem;
-    /* Padding inside the card */
     border-radius: 12px;
-    /* Rounded corners */
-    background: radial-gradient(circle,  #fdffdc,#fdffdc, #e6fee0, #e5ffef);
-    /* Fallback color */
+    background: radial-gradient(circle, #fdffdc, #fdffdc, #e6fee0, #e5ffef);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow for depth */
     width: 100%;
-    /* Full width for responsiveness */
     max-width: 90%;
-    /* Limit the card width to maintain layout */
     margin: 3rem auto;
-    /* Center the card with margins */
+    box-sizing: border-box; /* Make sure the padding is included in the width */
+    overflow: hidden; /* Prevent content from overflowing */
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Vendor prefix for Safari/older browsers */
 }
 
 /* Contact Title */
 .contact-title {
     font-size: 2rem; /* Adjust the font size as needed */
-    font-weight: bold; /* Make text bold */
-    background: #ef346c; /* Initial gradient */
-    background-clip: text !important; /* Clip background to the text */
+    font-weight: bold;
+    background: #ef346c;
+    background-clip: text !important;
     -webkit-background-clip: text !important; /* For Safari */
-    color: transparent; /* Make the text color transparent */
-    animation: text-animation 3s ease infinite; /* Apply animation */
-    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 1.5; /* Ensure good spacing */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for non-supporting browsers */
+    animation: text-animation 3s ease infinite; /* Apply text animation */
+    background-size: 200% 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word; /* Ensure long words break for responsiveness */
+}
+
+/* Keyframes for Text Animation */
+@-webkit-keyframes text-animation {
+    0% {
+        background: #000000;
+    }
+    25% {
+        background: hsl(0, 97%, 24%);
+    }
+    50% {
+        background: #18018b;
+    }
+    70% {
+        background: #4f012e;
+    }
+    100% {
+        background: #185701;
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        background: #000000;
+    }
+    25% {
+        background: hsl(0, 97%, 24%);
+    }
+    50% {
+        background: #18018b;
+    }
+    70% {
+        background: #4f012e;
+    }
+    100% {
+        background: #185701;
+    }
 }

@@ -2,36 +2,29 @@
 .award-container {
     display: flex;
     justify-content: center;
-    /* Center the card horizontally */
-    margin: 1rem;
-    /* Use rem for responsive margin */
+    margin: 1rem; /* Use rem for responsive margin */
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
     width: 100%;
     padding: 1rem;
+    box-sizing: border-box; /* Ensure proper box sizing in all browsers */
 }
 
 /* award Card Style */
 .award-card {
     padding: 1rem;
-    /* Padding inside the card */
-    border-radius: 12px;
-    /* Rounded corners */
-    background: linear-gradient(to right, #dbffcb, #ffffff, #fbfed1);
-    /* Fallback color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow for depth */
+    border-radius: 12px; /* Rounded corners */
+    background: linear-gradient(to right, #dbffcb, #ffffff, #fbfed1); /* Gradient background */
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* For Safari & old browsers */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
     width: 100%;
-    /* Full width for responsiveness */
-    max-width: 90%;
-    /* Limit the card width to maintain layout */
+    max-width: 90%; /* Limit the card width to maintain layout */
     margin: auto;
     overflow: hidden; /* Prevent content overflow */
 }
 
-
 /* Gradient text for the legend */
 .title-text-color {
-    background: linear-gradient(to right, #6641f9,#fa078d, #9d069b, #f33d44); /* Define your gradient */
+    background: linear-gradient(to right, #6641f9, #fa078d, #9d069b, #f33d44); /* Define your gradient */
     background-clip: text !important; /* Standard */
     -webkit-background-clip: text !important; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
@@ -39,12 +32,13 @@
     font-size: 1.2rem;
 }
 
+/* Text Container */
 .text-container {
     text-align: center; /* Center the text */
     max-width: 100%; /* Reduce max-width to allow responsiveness */
     overflow-wrap: break-word;
     word-wrap: break-word; /* Ensure long words wrap properly */
-    padding: 1rem; /* Add some padding for spacing */
+    padding: 1rem;
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -56,16 +50,16 @@
     max-width: 100%;
 }
 
-
+/* PrimeReact Splitter Panel */
 .p-splitter-panel {
     min-width: 100px;
     flex: 1 1 auto;
 }
 
+/* Fieldset content within the tab */
 .fieldset-tab-content {
     width: 100%;
 }
-
 
 /* Responsive settings for images */
 .image-size {
@@ -74,6 +68,7 @@
     width: 100%;
 }
 
+/* Text Panel */
 .text-panel {
     flex: 1; /* Ensure the SplitterPanel takes available space */
     display: flex; /* Flexbox layout */
@@ -86,46 +81,49 @@
 .awards-bitmoji-container {
     display: flex;
     flex-direction: column;
-    /* Stack title and Bitmoji vertically */
     align-items: center;
-    /* Center align items */
     width: 100%;
-    /* Full width for responsive layout */
-    max-width: 400px;
-    /* Set a max-width for the Bitmoji */
-    transition: transform 0.5s ease;
-    /* Smooth transition for animation */
-    margin:auto;
-    /* Adjust as needed to lift Bitmoji up */
-    animation: up-down 15s infinite
+    max-width: 400px; /* Set a max-width for the Bitmoji */
+    -webkit-transition: transform 0.5s ease; /* For Safari */
+    transition: transform 0.5s ease; /* Smooth transition for animation */
+    margin: auto;
+    -webkit-animation: up-down 15s infinite; /* Safari */
+    animation: up-down 15s infinite;
 }
 
 /* Bitmoji GIF */
 .awards-bitmoji-gif {
     width: 100%;
-    /* Make Bitmoji responsive */
-    height: auto;
-    /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Flex layout for the content */
 .award-content {
     display: flex;
-    flex-wrap: wrap;
-    /* Allow items to wrap */
+    flex-wrap: wrap; /* Allow items to wrap */
     justify-content: space-between;
 }
 
+/* Responsive Fieldset */
 .responsive-fieldset {
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure proper box-sizing */
     word-wrap: break-word; /* Ensure long words wrap */
     overflow: hidden; /* Prevent overflow */
 }
 
-
-@keyframes up-down  {
+/* Keyframes for Bitmoji's up-down animation */
+@-webkit-keyframes up-down {
+    0% { -webkit-transform: translateY(0); } /* Safari */
+    25% { -webkit-transform: translateY(-200px); } /* Safari */
+    45% { -webkit-transform: translateY(80px); } /* Safari */
+    50% { -webkit-transform: translateY(100px); } /* Safari */
+    65% { -webkit-transform: translateY(-60px); } /* Safari */
+    85% { -webkit-transform: translateY(-200px); } /* Safari */
+    100% { -webkit-transform: translateY(0); } /* Safari */
+}
+@keyframes up-down {
     0% { transform: translateY(0); }
     25% { transform: translateY(-200px); }
     45% { transform: translateY(80px); }

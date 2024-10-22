@@ -2,135 +2,136 @@
 .overview-container {
     display: flex;
     flex-direction: column;
-    margin: 5px;
-    /* Margin around the container */
+    margin: 5px; /* Margin around the container */
 }
 
 /* Title Style */
 .overview-title {
     margin: 0;
-    /* Remove margin below the title */
-    text-align: center;
-    /* Center the title */
+    text-align: center; /* Center the title */
     font-size: 1.3rem;
     color: black;
+    -webkit-animation: title-slide-in 1.5s ease forwards; /* Safari */
     animation: title-slide-in 1.5s ease forwards; /* Slide-In from the left for title */
-    margin-top: -40px; /* Lift Bitmoji up by 20px (adjust as needed) */
+    margin-top: -40px; /* Lift Bitmoji up */
 }
 
 /* Overview Card Style */
 .overview-card {
     padding: 1rem;
-    /* Padding inside the card */
-    border-radius: 12px;
-    /* Rounded corners */
-    background: #e8feff;
-    /* Fallback color */
+    border-radius: 12px; /* Rounded corners */
+    background: #e8feff; /* Fallback color */
     background: linear-gradient(to right, #fbfed1, #ffffff, #dbffcb);
-    /* Fallback color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow for depth */
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* For Safari & old browsers */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
     width: 100%;
-    /* Full width for responsiveness */
-    max-width: 90%;
-    /* Limit the card width to maintain layout */
-    margin: 3rem auto;
-    /* Center the card with margins */
+    max-width: 90%; /* Limit the card width to maintain layout */
+    margin: 3rem auto; /* Center the card */
+    -webkit-animation: card-fade-in-bottom 1s ease forwards; /* Safari */
     animation: card-fade-in-bottom 1s ease forwards; /* Fade-In from bottom for cards */
 }
 
-.overview-title-role{
-    background: linear-gradient(to right, #ef346c, #ff1bfb, #4a26ff); /* Gradient background */
+.overview-title-role {
+    background: linear-gradient(to right, #ef346c, #ff1bfb, #4a26ff);
+    -webkit-background-clip: text; /* Safari */
     background-clip: text; /* Standard */
-    -webkit-background-clip: text; /* For Safari */
-    -webkit-text-fill-color: transparent; /* For Safari */
-    color: transparent; /* Fallback for non-supporting browsers */  padding: 20px;
-    width: auto; /* Let the card adjust its size, but it won't shrink */
-    min-width: 300px; /* You can adjust the min-width of the card as necessary */
+    -webkit-text-fill-color: transparent; /* Safari */
+    color: transparent; /* Fallback */
+    padding: 20px;
     text-align: center;
+    min-width: 300px;
 }
 
+/* Col-6 Layout Adjustment */
 .description-section .col-6 {
     flex: 1 1 45%; /* Equal size for each column */
     max-width: 45%; /* Ensures columns stay equal width */
     margin: 10px; /* Space between columns */
 }
 
-/* Optional: Adjust the font size of the animated part */
+/* Adjust the font size of the animated part */
 .overview-title-h2 {
-    margin-left: 10px; /* Space between "Pavarna -" and animated text */
-    font-size: inherit; /* Ensure the font size matches */
-    line-height: inherit; /* Match the line height */
+    margin-left: 10px;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 /* Bitmoji Section */
 .bitmoji-container {
     display: flex;
     flex-direction: column;
-    /* Stack title and Bitmoji vertically */
     align-items: center;
-    /* Center align items */
     width: 100%;
-    /* Full width for responsive layout */
     max-width: 450px;
-    /* Set a max-width for the Bitmoji */
+    -webkit-transition: transform 0.5s ease; /* Safari */
     transition: transform 0.5s ease;
-    /* Smooth transition for animation */
     margin-top: -80px;
-    /* Adjust as needed to lift Bitmoji up */
 }
 
 /* Bitmoji GIF */
 .bitmoji-gif {
     width: 100%;
-    /* Make Bitmoji responsive */
     height: 500px;
-    /* Maintain aspect ratio */
-    animation:  subtle-shake 2.5s infinite /* Apply shaking animation */
+    -webkit-animation: subtle-shake 2.5s infinite; /* Safari */
+    animation: subtle-shake 2.5s infinite;
 }
 
-
-/* Optional: Add a small animation to the Bitmoji */
+/* Hover Effect for Bitmoji */
 .bitmoji-container:hover {
+    -webkit-transform: rotate(5deg) scale(1.1); /* Safari */
     transform: rotate(5deg) scale(1.1);
-    /* Rotate and scale slightly on hover */
 }
 
-/* Card Hover Effect */
+/* Hover Effect for Card */
 .overview-card:hover {
+    -webkit-transform: scale(1.02); /* Safari */
     transform: scale(1.02);
-    /* Scale up slightly on hover */
+    -webkit-transition: transform 0.3s ease; /* Safari */
     transition: transform 0.3s ease;
 }
 
 /* Content Section */
 .content-section {
-    flex: 2;
-    /* 2/3 of the space */
+    flex: 2; /* 2/3 of the space */
 }
 
 /* List Container */
 .description-card {
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Safari */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    background: linear-gradient(to right, #b6f7f7, #fcffe1, #fcffe1,#b6f7f7); /* Gradient background */
-    color: black;
-    min-height: 100px; /* Set min-height for flexibility */
-    display: flex; 
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease; /* Safari */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to right, #b6f7f7, #fcffe1, #fcffe1, #b6f7f7);
+    min-height: 100px;
+    display: flex;
     align-items: center; /* Vertically center text */
     justify-content: center; /* Horizontally center text */
     text-align: center; /* Center text */
-    word-wrap: break-word; /* Ensure text wraps when shrinking */
- }
+    word-wrap: break-word; /* Ensure text wraps */
+}
 
-/* Optional: Add a small animation to the Bitmoji */
-.bitmoji-containers:hover {
-    transform: rotate(5deg) scale(1.1);
-    /* Rotate and scale slightly on hover */
+/* Card Hover Effect */
+.description-card:hover {
+    -webkit-transform: scale(1.05); /* Safari */
+    transform: scale(1.05);
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Safari */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Keyframes for Card Fade-In from Bottom */
+@-webkit-keyframes card-fade-in-bottom {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px); /* Safari */
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0); /* Safari */
+        transform: translateY(0);
+    }
+}
 @keyframes card-fade-in-bottom {
     0% {
         opacity: 0;
@@ -143,6 +144,18 @@
 }
 
 /* Keyframes for Title Slide-In */
+@-webkit-keyframes title-slide-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%); /* Safari */
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0); /* Safari */
+        transform: translateX(0);
+    }
+}
 @keyframes title-slide-in {
     0% {
         opacity: 0;
@@ -154,13 +167,12 @@
     }
 }
 
-.description-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
-
+/* Keyframes for Subtle Shake Effect */
+@-webkit-keyframes subtle-shake {
+    0% { -webkit-transform:rotate(3deg) scale(1.1); }  
+    50% { -webkit-transform: rotate(-3deg) scale(1.1);} 
+    100% { -webkit-transform:rotate(3deg) scale(1.1); }  
 }
-
-/* Keyframe animation for shaking effect */
 @keyframes subtle-shake {
     0% { transform:rotate(3deg) scale(1.1); }  
     50% { transform: rotate(-3deg) scale(1.1);} 
