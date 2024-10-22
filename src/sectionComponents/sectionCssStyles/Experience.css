@@ -57,7 +57,7 @@
     width: 100%;
     /* Make Bitmoji responsive */
     height: auto;
-    animation: zoom-in-out 7s ease-in-out infinite; 
+    animation: zoom-in-out 5s ease-in-out infinite; 
 }
 
 /* Content Section */

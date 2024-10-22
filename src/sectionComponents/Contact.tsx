@@ -6,11 +6,11 @@ const Contact: React.FC = () => {
     return (
         <div className="contact-container">
             <Card className="contact-card">
-                <h1 className="skills-title">Connect with Me
-                    <div className='grid'>
-                        <span className="col-6 col-offset-4 ">Discover my superpowers!</span>
-                    </div>
-                </h1>
+            <div className= "flex-grow-4 flex align-items-center justify-content-center">
+                    <h1 className="contact-title">
+                    Connect with Me
+                    </h1>
+                </div>
                 <div className="contact-details flex align-items-center justify-content-center">
                     <Button icon="pi pi-envelope" label="subbupavar@gmail.com" className="p-button-text p-button-rounded" onClick={() => window.location.href = 'mailto:subbupavar@gmail.com'} />
 

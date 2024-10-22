@@ -16,7 +16,7 @@
     /* Padding inside the card */
     border-radius: 12px;
     /* Rounded corners */
-    background: linear-gradient(to right, #ffdce7, #fafffb, #c7e7ff);;
+    background: linear-gradient(to right, #dbffcb, #ffffff, #fbfed1);
     /* Fallback color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Subtle shadow for depth */
@@ -28,10 +28,6 @@
     overflow: hidden; /* Prevent content overflow */
 }
 
-.image-size{
-    display: flex;
-    min-width: auto;
-}
 
 /* Gradient text for the legend */
 .title-text-color {
@@ -46,13 +42,36 @@
 .text-container {
     text-align: center; /* Center the text */
     max-width: 100%; /* Reduce max-width to allow responsiveness */
+    overflow-wrap: break-word;
     word-wrap: break-word; /* Ensure long words wrap properly */
     padding: 1rem; /* Add some padding for spacing */
     margin: 0 auto; /* Center the container horizontally */
 }
 
-.responsive-splitter .p-splitter-panel {
-    width: 100%; /* Ensure panels are responsive */
+/* Responsive adjustments for Splitter */
+.responsive-splitter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.p-splitter-panel {
+    min-width: 100px;
+    flex: 1 1 auto;
+}
+
+.fieldset-tab-content {
+    width: 100%;
+}
+
+
+/* Responsive settings for images */
+.image-size {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 .text-panel {
@@ -60,6 +79,7 @@
     display: flex; /* Flexbox layout */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
+    word-wrap: break-word;
 }
 
 /* Bitmoji Section */
@@ -97,7 +117,9 @@
 }
 
 .responsive-fieldset {
-    max-width: 100%; /* Make sure fieldset fits within its container */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     word-wrap: break-word; /* Ensure long words wrap */
     overflow: hidden; /* Prevent overflow */
 }

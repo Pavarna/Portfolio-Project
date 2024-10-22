@@ -1,28 +1,22 @@
 /* Skills Container */
-.skills-container {
+.projects-container {
     display: flex;
     justify-content: center;
     /* Center the card horizontally */
     margin: 1rem;
     /* Use rem for responsive margin */
-    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    flex-wrap: wrap;
+    /* Ensure items wrap on smaller screens */
 }
 
-/* Flex layout for the content */
-.skills-content {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow items to wrap */
-    justify-content: space-between;
-}
 
 /* Skills Card Style */
-.skills-card {
+.projects-card {
     padding: 1rem;
     /* Padding inside the card */
     border-radius: 12px;
     /* Rounded corners */
-    background: linear-gradient(to right, #fdeaf0, #fafffb, #c7e7ff);
+    background: linear-gradient(to right, #c7e7ff, #fafffb, #fdeaf0);
     /* Fallback color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Subtle shadow for depth */
@@ -34,14 +28,9 @@
     /* Center the card with margins */
 }
 
-/* Card Hover Effect */
-.skills-card:hover {
-    animation: zoom 0.6s ease forwards;
-    /* Apply the zoom animation on hover */
-}
 
 /* Bitmoji Section */
-.skills-bitmoji-container {
+.projects-bitmoji-container {
     display: flex;
     flex-direction: column;
     /* Stack title and Bitmoji vertically */
@@ -58,106 +47,79 @@
 }
 
 /* Bitmoji GIF */
-.skills-bitmoji-gif {
+.projects-bitmoji-gif {
     width: 100%;
     /* Make Bitmoji responsive */
     height: auto;
     /* Maintain aspect ratio */
-    animation: move-left-right 2.5s infinite 
+    animation: move-left-right 2.5s infinite
 }
 
 /* Content Section */
 .content-section {
-    flex: 2;
-    /* 2/3 of the space */
+    flex: 2; /* Ensure content-section takes available space */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of content */
+    justify-content: space-between; /* Ensure proper spacing between items */
 }
 
 /* Optional: Add a small animation to the Bitmoji */
-.skills-bitmoji-container:hover {
+.projects-bitmoji-container:hover {
     transform: rotate(5deg) scale(1.1);
     /* Rotate and scale slightly on hover */
 }
 
-
-
-/* List Container */
-.skills-description-card {
-    background: linear-gradient(to right, #b6f7f7, #fcffe1, #fcffe1,#b6f7f7);
-    color: black;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 1.1rem;
-    min-height: 90px; /* Set min-height for flexibility */
-    display: flex; 
-    align-items: center; /* Vertically center text */
-    justify-content: center; /* Horizontally center text */
-    text-align: center; /* Center text */
-    word-wrap: break-word; /* Ensure text wraps when shrinking */
+/* projects Title */
+.projects-title {
+    font-size: 2rem;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    /* Make text bold */
+    background: #ef346c;
+    /* Initial gradient */
+    background-clip: text !important;
+    /* Clip background to the text */
+    -webkit-background-clip: text !important;
+    /* For Safari */
+    color: transparent;
+    /* Make the text color transparent */
+    animation: text-animation 3s ease infinite;
+    /* Apply animation */
+    background-size: 200% 100%;
+    /* Ensure the gradient covers the text properly */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    /* Ensure good spacing */
 }
 
 .description-section .col-6 {
-    flex: 1 1 45%; /* Equal size for each column */
-    max-width: 45%; /* Ensures columns stay equal width */
-    margin: 10px; /* Space between columns */
+    flex: 1 1 45%;
+    /* Equal size for each column */
+    max-width: 45%;
+    /* Ensures columns stay equal width */
+    margin: 10px;
+    /* Space between columns */
 }
 
-.skills-description-card:hover {
-    transform: scale(1.05);
-    /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Larger shadow on hover */
-}
-
-/* Logo Container */
-.logo-container {
+.button-group {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between buttons */
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
 }
 
-/* Technology Logos */
-.tech-logo {
-    width: 50px;
+.projects-img {
+    width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    object-fit: fill;
+    padding: 0.5rem;
 }
 
-.tech-logo:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-/* Keyframes for Zoom Animation */
-@keyframes zoom {
-    0% {
-        transform: scale(1);
-        /* Start at original scale */
-    }
-
-    50% {
-        transform: scale(1.1);
-        /* Scale up to 110% */
-    }
-
-    100% {
-        transform: scale(1);
-        /* Return to original scale */
-    }
-}
-
-/* Skills Title */
-.skills-title {
-    font-size: 2rem; /* Adjust the font size as needed */
-    font-weight: bold; /* Make text bold */
-    background: #ef346c; /* Initial gradient */
-    background-clip: text !important; /* Clip background to the text */
-    -webkit-background-clip: text !important; /* For Safari */
-    color: transparent; /* Make the text color transparent */
-    animation: text-animation 3s ease infinite; /* Apply animation */
-    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 1.5; /* Ensure good spacing */
+/* Ensure the text inside the card wraps and doesn't overflow */
+.card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 /* Keyframes for Text Animation */
@@ -165,15 +127,19 @@
     0% {
         background: #000000
     }
+
     25% {
-        background: hsl(0, 97%, 24%); 
+        background: hsl(0, 97%, 24%);
     }
+
     50% {
         background: #18018b
     }
+
     70% {
         background: #4f012e
     }
+
     100% {
         background: #185701
     }
@@ -181,7 +147,19 @@
 
 /* Keyframe animation for shaking effect */
 @keyframes move-left-right {
-    0% { transform: translateX(15px); }   /* Start slightly to the right */
-    50% { transform: translateX(-15px); }  /* Move slightly to the left */
-    100% { transform: translateX(15px); }   /* Return to the starting position */
+    0% {
+        transform: translateX(15px);
+    }
+
+    /* Start slightly to the right */
+    50% {
+        transform: translateX(-15px);
+    }
+
+    /* Move slightly to the left */
+    100% {
+        transform: translateX(15px);
+    }
+
+    /* Return to the starting position */
 }

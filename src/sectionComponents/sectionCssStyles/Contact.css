@@ -43,7 +43,7 @@ h2 {
     /* Padding inside the card */
     border-radius: 12px;
     /* Rounded corners */
-    background: linear-gradient(to right, #fdeaf0, #fafffb, #c7e7ff);
+    background: radial-gradient(circle,  #fdffdc,#fdffdc, #e6fee0, #e5ffef);
     /* Fallback color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Subtle shadow for depth */
@@ -53,4 +53,18 @@ h2 {
     /* Limit the card width to maintain layout */
     margin: 3rem auto;
     /* Center the card with margins */
+}
+
+/* Contact Title */
+.contact-title {
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make text bold */
+    background: #ef346c; /* Initial gradient */
+    background-clip: text !important; /* Clip background to the text */
+    -webkit-background-clip: text !important; /* For Safari */
+    color: transparent; /* Make the text color transparent */
+    animation: text-animation 3s ease infinite; /* Apply animation */
+    background-size: 200% 100%; /* Ensure the gradient covers the text properly */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5; /* Ensure good spacing */
 }

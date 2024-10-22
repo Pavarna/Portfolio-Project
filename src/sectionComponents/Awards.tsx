@@ -32,26 +32,27 @@ const Awards: React.FC = () => {
                                 <Divider align="center"></Divider>
                                 <p className="m-0">
                                     <h2 className="title-text-color">Gold Medalist - First Rank Holder</h2>
-                                    I am a proud gold medalist and 1st rank holder in BSc Computer Technology from Bharathiar University, which has over 100 affiliated colleges. This prestigious achievement highlights my academic excellence and dedication in a highly competitive environment.                                </p>
+                                    I am a proud gold medalist and 1st rank holder in BSc Computer Technology from Bharathiar University, which has over 100 affiliated colleges. This prestigious achievement highlights my academic excellence and dedication in a highly competitive environment.
+                                </p>
                             </Fieldset>
 
                             <Divider align="center"></Divider>
 
                             {/* Certifications Fieldset */}
                             <Fieldset legend={<span className="title-text-color">Accomplishments</span>} className="responsive-fieldset">
-                                <TabView>
+                                <TabView className="responsive-tabview">
                                     {/* Frontend Development Tab */}
                                     <TabPanel header={<span className="title-text-color">Frontend Development</span>}>
                                         <Splitter style={{ height: 'auto', flexWrap: 'wrap' }} className="responsive-splitter">
-                                            <SplitterPanel className="flex align-items-center justify-content-center" size={15} minSize={5} style={{ minWidth: '100px' }}>
+                                            <SplitterPanel className="flex align-items-center justify-content-center" size={15} minSize={5} style={{ minWidth: '100px', maxWidth: '120px' }}>
                                                 <div className="card">
                                                     <h4 className='flex align-items-center justify-content-center'>Certificate</h4>
                                                     <Image src={metaCertificate} zoomSrc={metaCertificate} alt="Meta Frontend Specialization Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
                                                     <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span>Click on the image</h6>
                                                 </div>
                                             </SplitterPanel>
-                                            <SplitterPanel className="flex align-items-center justify-content-center" size={85}>
-                                                <div style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word' }}>
+                                            <SplitterPanel className="flex align-items-center justify-content-center" size={85} style={{ minWidth: '400px' }}>
+                                                <div style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
                                                     <h3 className="title-text-color">Meta Front-End Developer Specialization: Professional Certificate - 9 course series</h3>
                                                     <ol>
                                                         <li>Introduction to Front-End Development</li>
@@ -72,15 +73,15 @@ const Awards: React.FC = () => {
                                     {/* DevOps Tab */}
                                     <TabPanel header={<span className="title-text-color">DevOps</span>}>
                                         <Splitter style={{ height: 'auto', flexWrap: 'wrap' }} className="responsive-splitter">
-                                            <SplitterPanel className="flex align-items-center justify-content-center" size={15} minSize={5} style={{ minWidth: '100px' }}>
+                                            <SplitterPanel className="flex align-items-center justify-content-center" size={15} minSize={5} style={{ minWidth: '100px', maxWidth: '120px' }}>
                                                 <div className="card">
                                                     <h4 className='flex align-items-center justify-content-center'>Certificate</h4>
                                                     <Image src={IBMCertificate} zoomSrc={IBMCertificate} alt="IBM Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
                                                     <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span> Click on the image</h6>
                                                 </div>
                                             </SplitterPanel>
-                                            <SplitterPanel className="flex text-panel align-items-center justify-content-center" size={85}>
-                                                <div className="text-container" style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word' }}>
+                                            <SplitterPanel className="flex text-panel align-items-center justify-content-center" size={85} style={{ minWidth: '400px' }}>
+                                                <div className="text-container" style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
                                                     <h3 className="title-text-color">IBM Introduction to Containers w/ Docker, Kubernetes & Openshift.</h3>
                                                     <p>
                                                         I learned how to build, manage, and deploy containerized applications using Docker, orchestrate them with Kubernetes, and explore advanced features like scaling and monitoring in OpenShift.

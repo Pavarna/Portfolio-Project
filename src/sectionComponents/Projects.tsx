@@ -7,12 +7,12 @@ import Bitmoji from '../assets/images/Portfolio Project Thumbnail.png';
 
 const Projects: React.FC = () => {
     const header = (
-        <img alt="portfolio project card" src={Bitmoji} />
+        <img className="projects-img" alt="portfolio project card" src={Bitmoji} />
     );
     const footer = (
         <>
-            <Button icon="pi pi-github" label="View Live Project" className="p-button-text p-button-rounded" onClick={() => window.open('https://www.linkedin.com/in/pavarna-s-7b99911b1', '_blank')} />
-            <Button icon="pi pi-github" label="View Code Repo" className="p-button-text p-button-rounded" onClick={() => window.open('https://www.linkedin.com/in/pavarna-s-7b99911b1', '_blank')} />
+            <Button icon="pi pi-github" label="View Live Project" className="p-button-text p-button-rounded" onClick={() => window.open('https://github.com/Pavarna/Portfolio-Project', '_blank')} />
+            <Button icon="pi pi-github" label="View Code Repo" className="p-button-text p-button-rounded" onClick={() => window.open('https://github.com/Pavarna/Portfolio-Project', '_blank')} />
 
         </>
     );
@@ -26,17 +26,24 @@ const Projects: React.FC = () => {
                         <span className="col-6">Projects - Expertise Demonstrations!</span>
                     </h1>
                 </div>
-
+              
                 <div className="flex projects-content align-items-stretch flex-wrap">
                     {/* Title with Animation and PrimeReact Cards for Each List Item */}
-                    <div className="flex-grow-4 flex align-items-center justify-content-start content-section">
+                    <div className="flex-grow-4 flex align-items-start justify-content-start content-section">
                         {/* PrimeReact Cards for Each List Item */}
-                            <div className="card flex col-offset-2 justify-content-center">
-                                <Card title="Portfolio - Frontend Project" subTitle="Reactjs with TypeScript" footer={footer} header={header} className="md:w-29rem">
-                                    <p className="m-0">
-                                    </p>
-                                </Card>
-                            </div>
+                        <div className="card flex col-offset-2 justify-content-center">
+                            <Card title="Portfolio - Frontend Project" footer={footer} header={header} className="md:w-29rem">
+                                <div className='button-group'>
+                                    <Button label="ReactJs" outlined />
+                                    <Button label="TypeScript" outlined />
+                                    <Button label="PrimeReact" outlined />
+                                    <Button label="PrimeFlex" outlined />
+                                </div>
+                                <p className="m-0">
+                                    Interactive portfolio built with ReactJS, showcasing my skills, experience, projects, and awards, designed to highlight my expertise in frontend development.
+                                </p>
+                            </Card>
+                        </div>
                     </div>
 
                     {/* Bitmoji on the right */}

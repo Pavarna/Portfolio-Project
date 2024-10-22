@@ -76,11 +76,11 @@ const Experience: React.FC = () => {
                                     </Divider>
                                     <p className="m-0 experience-description-card">
                                         <ul className="custom-list">
-                                            <li>    <b>Actively participated</b> in organizing internal team events, fostering <b>team spirit and enhancing collaboration</b>.</li>
-                                            <li>    Led <b>business communication meetings</b> with stakeholders, improving project alignment and <b>timely decision-making</b>. </li>
-                                            <li>    Oversaw leave tracking and eTime submission, <b>ensuring smooth operational</b> workflows within the team.</li>
-                                            <li>    Managed team Confluence tracker, <b>ensuring up-to-date documentation</b> of project progress, team structure, and decision logs.</li>
-                                            <li>    <b>Coordinated</b> team structure updates, optimizing resource allocation and productivity within the department. </li>
+                                            <li><b>Actively participated</b> in organizing internal team events, fostering <b>team spirit and enhancing collaboration</b>.</li>
+                                            <li>Led <b>business communication meetings</b> with stakeholders, improving project alignment and <b>timely decision-making</b>. </li>
+                                            <li>Oversaw leave tracking and eTime submission, <b>ensuring smooth operational</b> workflows within the team.</li>
+                                            <li>Managed team Confluence tracker, <b>ensuring up-to-date documentation</b> of project progress, team structure, and decision logs.</li>
+                                            <li><b>Coordinated</b> team structure updates, optimizing resource allocation and productivity within the department. </li>
                                         </ul>
                                     </p>
                                 </Panel>
