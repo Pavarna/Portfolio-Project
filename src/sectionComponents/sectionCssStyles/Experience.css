@@ -31,6 +31,17 @@
     -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Vendor prefix for Safari/older browsers */
 }
 
+.heading-color{
+    background: linear-gradient(to right, #6641f9, #fa078d, #9d069b, #f33d44); /* Define your gradient */
+    background-clip: text !important; /* Standard */
+    -webkit-background-clip: text !important; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for non-supporting browsers */
+    font-size: 1rem;
+    overflow-wrap: break-word; /* Break long words if necessary */
+    word-wrap: break-word; /* For older browsers */
+}
+
 /* Bitmoji Section */
 .experience-bitmoji-container {
     display: flex;

@@ -74,7 +74,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1.1rem;
     min-height: 90px;
-    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -118,6 +117,30 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.5;
 }
+
+.skills-heading-color{
+    background: linear-gradient(to right, #522dea, #ee0284, #c203bf, #1710e4); /* Define your gradient */
+    background-clip: text !important; /* Standard */
+    -webkit-background-clip: text !important; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for non-supporting browsers */
+    font-size: 1.2rem;
+    overflow-wrap: break-word; /* Break long words if necessary */
+    word-wrap: break-word; /* For older browsers */
+}
+
+/* Default layout for larger screens */
+.offset-class {
+    margin-left: 33.33%; /* 4-column offset */
+}
+
+/* When the screen width is 768px or less, remove the offset */
+@media screen and (max-width: 768px) {
+    .offset-class {
+        margin-left: 0; /* Remove the offset */
+    }
+}
+
 
 /* Keyframes for Text Animation */
 @-webkit-keyframes text-animation {

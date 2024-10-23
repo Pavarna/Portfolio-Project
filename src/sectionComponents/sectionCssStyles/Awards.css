@@ -111,6 +111,14 @@
     animation: up-down 15s infinite;
 }
 
+.awards-bitmoji-container:hover {
+    -webkit-transform: rotate(5deg) scale(1.1); /* Safari and older versions of Chrome */
+    -moz-transform: rotate(5deg) scale(1.1); /* Firefox */
+    -ms-transform: rotate(5deg) scale(1.1); /* Internet Explorer 9 */
+    -o-transform: rotate(5deg) scale(1.1); /* Opera */
+    transform: rotate(5deg) scale(1.1); /* Standard */
+}
+
 /* Bitmoji GIF */
 .awards-bitmoji-gif {
     width: 100%;
@@ -155,6 +163,25 @@
 
 .custom-splitter {
     height: 350px;
+}
+
+.awards-description-card {
+    color: black;
+    transition: -webkit-transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.awards-description-card:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* When the screen width is 768px or less, adjust the height */

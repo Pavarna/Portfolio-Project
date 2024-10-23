@@ -44,7 +44,7 @@ const Experience: React.FC = () => {
                                     <Divider align="left">
                                         <div className="inline-flex align-items-center">
                                             <i className="pi pi-code mr-2"></i>
-                                            <b>Frontend Development Responsiblities</b>
+                                            <b className='heading-color'>Frontend Development Responsiblities</b>
                                         </div>
                                     </Divider>
                                     <p className="m-0 experience-description-card">
@@ -71,7 +71,7 @@ const Experience: React.FC = () => {
                                     <Divider align="left">
                                         <div className="inline-flex align-items-center">
                                             <i className="pi pi-users mr-2"></i>
-                                            <b>Management & Communication Responsibilities</b>
+                                            <b className='heading-color'>Management & Communication Responsibilities</b>
                                         </div>
                                     </Divider>
                                     <p className="m-0 experience-description-card">

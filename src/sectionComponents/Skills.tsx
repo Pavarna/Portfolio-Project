@@ -11,7 +11,7 @@ const Skills: React.FC = () => {
                 <div className="skills-title-container flex-grow-4 flex align-items-center justify-content-center">
                     <h1 className="skills-title">
                         <div className='grid'>
-                            <span className="col-6 col-offset-4 ">Discover my superpowers!</span>
+                            <span className="col-6 offset-class">Discover my superpowers!</span>
                         </div>
                         <div className='grid'>
                             <span className="col-12">Frontend magic, UI/UX wizardry, DevOps mastery, and leadership expertise.</span>
@@ -26,42 +26,42 @@ const Skills: React.FC = () => {
                         <div className="description-section grid">
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b>Front-End Development: </b>ReactJS, HTML5, CSS3, JavaScript (ES6+), TypeScript
+                                    <b  className="skills-heading-color">Front-End Development: </b>ReactJS, HTML5, CSS3, JavaScript (ES6+), TypeScript
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b>Frameworks/Libraries: </b>Redux, React Router, Bootstrap, React Saga, Prime React
+                                    <b  className="skills-heading-color">Frameworks/Libraries: </b>Redux, React Router, Bootstrap, React Saga, Prime React
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b>Version Control: </b>Git, GitHub, Jenkins (Basics)
+                                    <b  className="skills-heading-color">Version Control: </b>Git, GitHub, Jenkins (Basics)
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b> UI/UX Design: </b>Figma, Responsive Web Design, Wireframe
+                                    <b  className="skills-heading-color"> UI/UX Design: </b>Figma, Responsive Web Design, Wireframe
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b>Testing:  </b>Unit Testing, Chrome DevTools, Cypress & Jest (Basics)
+                                    <b  className="skills-heading-color">Testing:  </b>Unit Testing, Chrome DevTools, Cypress & Jest (Basics)
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b> DevOps Tools: </b>Docker, Kubernetes (Basics)
+                                    <b  className="skills-heading-color"> DevOps Tools: </b>Docker, Kubernetes (Basics)
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b> Agile Project Management: </b>Jira, User Stories, Business Communication
+                                    <b  className="skills-heading-color"> Agile Project Management: </b>Jira, User Stories, Business Communication, Scrum(Basics)
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card">
-                                    <b> Business & Team Management: </b>Event Organization, Confluence, etime & Leave Tracker, Team Structure Management
+                                    <b  className="skills-heading-color"> Business & Team Management: </b>Event Organization, Confluence, etime & Leave Tracker, Team Structure Management
                                 </Card>
                             </div>
                         </div>

@@ -14,8 +14,8 @@ const Awards: React.FC = () => {
     return (
         <div className="award-container">
             <Card className="award-card">
-                <div className="experience-title-container flex-grow-4 flex align-items-center justify-content-center">
-                    <h1 className="experience-title">
+                <div className="flex-grow-4 flex align-items-center justify-content-center">
+                    <h1 className="awards-title">
                         Awards & Accomplishments
                     </h1>
                 </div>
@@ -25,12 +25,12 @@ const Awards: React.FC = () => {
 
                             {/* Awards Fieldset */}
                             <Fieldset legend={<span className="title-text-color">Awards</span>} className="responsive-fieldset">
-                                <p className="m-0">
+                                <p className="m-0  awards-description-card">
                                     <h2 className="title-text-color">Very Special Achievement Award (VESPAA)</h2>
                                     Awarded for outstanding dedication and leadership as the SME and Technical Lead for the key application in DHL IT Services. Successfully ensured all releases in 2023 and Q1-2024 were delivered on time and with high quality, without any stakeholder escalations.
                                 </p>
                                 <Divider align="center"></Divider>
-                                <p className="m-0">
+                                <p className="m-0 awards-description-card">
                                     <h2 className="title-text-color">Gold Medalist - First Rank Holder</h2>
                                     I am a proud gold medalist and 1st rank holder in BSc Computer Technology from Bharathiar University, which has over 100 affiliated colleges. This prestigious achievement highlights my academic excellence and dedication in a highly competitive environment.
                                 </p>
@@ -68,7 +68,7 @@ const Awards: React.FC = () => {
                                                 </Splitter>
                                             </p>
                                         </TabPanel>
-                                        <TabPanel header={<span className="title-text-color">DevOps</span>} leftIcon="pi pi-user ml-2">
+                                        <TabPanel header={<span className="title-text-color"> DevOps</span>} leftIcon="pi pi-user mr-2">
                                             <p className="m-0">
                                                 <Splitter className="custom-splitter" style={{ flexWrap: 'wrap' }}>
                                                     <SplitterPanel className="flex align-items-center justify-content-center" size={25} minSize={10}>

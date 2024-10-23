@@ -37,6 +37,15 @@
     word-wrap: break-word; /* Ensure long words break for responsiveness */
 }
 
+/* Button Group */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.5rem; /* Padding to avoid overflow */
+}
+
 /* Keyframes for Text Animation */
 @-webkit-keyframes text-animation {
     0% {
