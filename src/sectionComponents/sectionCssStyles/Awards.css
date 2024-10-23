@@ -184,10 +184,10 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* When the screen width is 768px or less, adjust the height */
-@media screen and (max-width: 768px) {
+/* When the screen width is 1100px or less, adjust the height */
+@media screen and (max-width: 1100px) {
     .custom-splitter {
-        height: 600px;
+        height: 800px;
     }
 }
 
