@@ -10,7 +10,7 @@
 .contact-card {
     padding: 1rem;
     border-radius: 12px;
-    background: radial-gradient(circle, #fdffdc, #fdffdc, #e6fee0, #e5ffef);
+    background:linear-gradient(to right, #fdeaf0, #fafffb, #c7e7ff);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 90%;

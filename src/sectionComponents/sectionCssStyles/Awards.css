@@ -30,16 +30,40 @@
     -webkit-text-fill-color: transparent; /* For Safari */
     color: transparent; /* Fallback for non-supporting browsers */
     font-size: 1.2rem;
+    overflow-wrap: break-word; /* Break long words if necessary */
+    word-wrap: break-word; /* For older browsers */
 }
 
 /* Text Container */
 .text-container {
-    text-align: center; /* Center the text */
-    max-width: 100%; /* Reduce max-width to allow responsiveness */
-    overflow-wrap: break-word;
-    word-wrap: break-word; /* Ensure long words wrap properly */
-    padding: 1rem;
-    margin: 0 auto; /* Center the container horizontally */
+    word-wrap: break-word; /* Ensure long words wrap */
+    overflow-wrap: break-word; /* Ensure proper word wrapping */
+    padding: 0 1rem; /* Padding to avoid text sticking to edges */
+    max-width: 100%; /* Maintain responsiveness */
+}
+
+
+/* Awards Title */
+.awards-title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: #ef346c;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent;
+    animation: text-animation 3s ease infinite;
+    background-size: 200% 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+}
+
+/* Flex layout for the content */
+.awards-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Responsive adjustments for Splitter */
@@ -50,11 +74,7 @@
     max-width: 100%;
 }
 
-/* PrimeReact Splitter Panel */
-.p-splitter-panel {
-    min-width: 100px;
-    flex: 1 1 auto;
-}
+
 
 /* Fieldset content within the tab */
 .fieldset-tab-content {
@@ -104,13 +124,44 @@
     justify-content: space-between;
 }
 
-/* Responsive Fieldset */
-.responsive-fieldset {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box; /* Ensure proper box-sizing */
-    word-wrap: break-word; /* Ensure long words wrap */
-    overflow: hidden; /* Prevent overflow */
+/* Make the Fieldset legend wrap on smaller screens */
+.responsive-fieldset .p-fieldset-legend {
+    white-space: normal; /* Allows the legend text to wrap */
+    word-wrap: break-word; /* Ensures long words are wrapped */
+}
+
+/* Make the TabPanel headers responsive */
+.card .p-tabview-nav {
+    flex-wrap: wrap; /* Allows the tab headers to wrap */
+}
+
+/* Ensure the TabPanel headers align nicely when wrapped */
+.card .p-tabview-nav .p-tabview-nav-link {
+    flex-basis: auto; /* Allows the tabs to adjust size when wrapping */
+    white-space: normal; /* Makes sure the text wraps */
+    text-align: center; /* Center the text when wrapped */
+}
+
+.card .p-tabview-nav .p-tabview-nav-link {
+    padding: 0.5rem 1rem; 
+}
+
+/* Make sure the card is responsive */
+.card {
+    width: 100%; /* Ensure the card takes full width on smaller screens */
+    max-width: 100%; /* Prevent the card from overflowing */
+    box-sizing: border-box;
+}
+
+.custom-splitter {
+    height: 350px;
+}
+
+/* When the screen width is 768px or less, adjust the height */
+@media screen and (max-width: 768px) {
+    .custom-splitter {
+        height: 600px;
+    }
 }
 
 /* Keyframes for Bitmoji's up-down animation */

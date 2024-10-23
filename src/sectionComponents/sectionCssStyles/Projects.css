@@ -140,7 +140,9 @@
 /* Move Left-Right Animation */
 @keyframes move-left-right {
     0% { transform: translateX(15px); }
-    50% { transform: translateX(-15px); }
+    25% { transform: translateX(-45px); }
+    50% { transform: translateX(-95px); }
+    75% { transform: translateX(-125px); }
     100% { transform: translateX(15px); }
 }
 
