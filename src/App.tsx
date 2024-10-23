@@ -23,12 +23,12 @@ const App: React.FC = () => {
 
     // Menu items for the PrimeReact Menubar
     const items = [
-        { label: 'Profile', icon: 'pi pi-book', command: () => scrollToSection(profileRef) },
-        { label: 'Skills', icon: 'pi pi-book', command: () => scrollToSection(skillsRef) },
-        { label: 'Experience', icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef) },     
-        { label: 'Projects', icon: 'pi pi-github', command: () => scrollToSection(projectRef) },
-        { label: 'Awards', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef) },
-        { label: 'Contact', icon: 'pi pi-phone', command: () => scrollToSection(contactRef) }
+            { label: 'Profile', icon: 'pi pi-book', command: () => scrollToSection(profileRef), 'data-testid': 'menu-profile' },
+            { label: 'Skills', icon: 'pi pi-book', command: () => scrollToSection(skillsRef), 'data-testid': 'menu-skills' },
+            { label: 'Experience', icon: 'pi pi-briefcase', command: () => scrollToSection(experienceRef), 'data-testid': 'menu-experience' },
+            { label: 'Projects', icon: 'pi pi-github', command: () => scrollToSection(projectRef), 'data-testid': 'menu-projects' },
+            { label: 'Awards', icon: 'pi pi-bolt', command: () => scrollToSection(awardsRef), 'data-testid': 'menu-awards' },
+            { label: 'Contact', icon: 'pi pi-phone', command: () => scrollToSection(contactRef), 'data-testid': 'menu-contact' },
     ];
 
     return (

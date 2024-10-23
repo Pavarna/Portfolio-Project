@@ -38,6 +38,7 @@ const Projects: React.FC = () => {
                                     <Button label="TypeScript" outlined />
                                     <Button label="PrimeReact" outlined />
                                     <Button label="PrimeFlex" outlined />
+                                    <Button label="Jest" outlined />
                                 </div>
                                 <p className="m-0">
                                     Interactive portfolio built with ReactJS, showcasing my skills, experience, projects, and awards, designed to highlight my expertise in frontend development.
