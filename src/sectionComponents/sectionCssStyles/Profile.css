@@ -42,11 +42,20 @@
     min-width: 300px;
 }
 
+/* Description Section Adjustment */
+.description-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content on mobile */
+}
+
+
 /* Col-6 Layout Adjustment */
 .description-section .col-6 {
     flex: 1 1 45%; /* Equal size for each column */
     max-width: 45%; /* Ensures columns stay equal width */
     margin: 10px; /* Space between columns */
+    min-width: 250px; /* Minimum width for smaller screens */
 }
 
 /* Adjust the font size of the animated part */
@@ -188,4 +197,39 @@
     0% { transform:rotate(3deg) scale(1.1); }  
     50% { transform: rotate(-3deg) scale(1.1);} 
     100% { transform:rotate(3deg) scale(1.1); }  
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+     /* Adjust flex direction for mobile to stack the Bitmoji and title vertically */
+     .overview-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text for mobile */
+    }
+
+      /* Add space between the Bitmoji and the name/role */
+      .bitmoji-container {
+        margin-bottom: 20px; /* Space between Bitmoji and title */
+    }
+    
+    .description-section .col-6 {
+        flex: 1 1 100%; /* Full width for each column on mobile */
+        max-width: 100%; /* Ensure columns take full width */
+        margin: 10px 0; /* Vertical space between items */
+    }
+
+    .overview-title {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    .bitmoji-gif {
+        height: 300px; /* Adjust Bitmoji size for mobile */
+    }
+
+    .overview-card {
+        max-width: 100%; /* Full width for mobile */
+        padding: 1rem;
+        margin: 1.5rem auto; /* Adjust margins for mobile */
+    }
 }
