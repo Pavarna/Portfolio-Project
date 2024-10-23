@@ -8,17 +8,17 @@ pipeline{
         }
         stage('Install Dependencies'){
             steps{
-                  sh 'npm install'
+                  bat 'npm install'
             }
         }
         stage('Build Project') {
             steps {
-                sh 'npm run build'
+                bat 'npm run build'
             }
         }
         stage('Deploy to GitHub Pages') {
             steps {
-                sh 'npm run deploy'
+                bat 'npm run deploy'
             }
         }
     }
