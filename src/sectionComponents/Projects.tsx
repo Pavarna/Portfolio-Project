@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
                     <div className="flex-grow-4 flex align-items-center justify-content-start content-section">
                         {/* PrimeReact Cards for Each List Item */}
                         <div className="card flex justify-content-center">
-                            <Card title="Portfolio - Frontend Project" footer={footer} header={header} className="md:w-29rem">
+                            <Card title={<span className='title-color'>Portfolio - Frontend Project</span>} footer={footer} header={header} className="md:w-29rem">
                                 <div className='button-group'>
                                     <Button label="ReactJs" outlined />
                                     <Button label="TypeScript" outlined />

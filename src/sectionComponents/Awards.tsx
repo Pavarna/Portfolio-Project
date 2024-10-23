@@ -27,12 +27,12 @@ const Awards: React.FC = () => {
                             <Fieldset legend={<span className="title-text-color">Awards</span>} className="responsive-fieldset">
                                 <p className="m-0  awards-description-card">
                                     <h2 className="title-text-color">Very Special Achievement Award (VESPAA)</h2>
-                                    Awarded for outstanding dedication and leadership as the SME and Technical Lead for the key application in DHL IT Services. Successfully ensured all releases in 2023 and Q1-2024 were delivered on time and with high quality, without any stakeholder escalations.
+                                    Awarded for <b>outstanding dedication</b> and <b>leadership</b> as the <b>SME</b> and <b>Technical Lead</b> for the key application in DHL IT Services. Successfully ensured all releases in 2023 and Q1-2024 were <b>delivered on time and with high quality</b>, without any stakeholder escalations.
                                 </p>
                                 <Divider align="center"></Divider>
                                 <p className="m-0 awards-description-card">
                                     <h2 className="title-text-color">Gold Medalist - First Rank Holder</h2>
-                                    I am a proud gold medalist and 1st rank holder in BSc Computer Technology from Bharathiar University, which has over 100 affiliated colleges. This prestigious achievement highlights my academic excellence and dedication in a highly competitive environment.
+                                    I am a proud <b>gold medalist</b> and <b>1st rank holder</b> in BSc Computer Technology from Bharathiar University, which has over 100 affiliated colleges. This prestigious achievement highlights my academic excellence and dedication in a highly competitive environment.
                                 </p>
                             </Fieldset>
 

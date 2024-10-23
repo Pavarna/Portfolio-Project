@@ -119,6 +119,17 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.title-color {
+    background: linear-gradient(to right, #6641f9, #fa078d, #9d069b, #f33d44); /* Define your gradient */
+    background-clip: text !important; /* Standard */
+    -webkit-background-clip: text !important; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for non-supporting browsers */
+    font-size: 1.4rem;
+    overflow-wrap: break-word; /* Break long words if necessary */
+    word-wrap: break-word; /* For older browsers */
+}
+
 /* Keyframes for Card Fade-In from Bottom */
 @-webkit-keyframes card-fade-in-bottom {
     0% {
