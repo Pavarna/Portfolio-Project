@@ -16,7 +16,7 @@ Deployed on **GitHub Pages**: [View Live](https://Pavarna.github.io/Portfolio-Pr
 ## Features
 - **Fully Responsive**: Compatible with both desktop and mobile devices using **PrimeFlex** for grid-based layouts.
 - **Animations**: Cool animations and hover effects to enhance visual appeal.
-- **Navigation**: Easily navigate through sections like Profile, Skills, Experience, Projects, Awards, and Contact using **React Router**.
+- **Navigation**: Easily navigate through sections like Profile, Skills, Experience, Projects, Awards, and Contact
 - **Mobile-Friendly**: Optimized for mobile browsing with a responsive design.
 - **Unit Testing**: Tested with **Jest** to ensure the reliability of key components.
 - **PrimeReact UI Components**: Sleek UI elements and components provided by PrimeReact, enhancing user interface consistency and modern look.
