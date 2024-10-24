@@ -29,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "echo 'Skipping build as it was already done.'",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --verbose"
   },
   "eslintConfig": {
     "extends": [

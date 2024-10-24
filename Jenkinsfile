@@ -27,14 +27,19 @@ pipeline {
         }
         stage('Deploy to GitHub Pages') {
             steps {
-                // Set Git user identity locally
-                bat 'git config user.email "subbupavar@gmail.com"'
-                bat 'git config user.name "Pavarna"'
-                
-                // Run the deployment script
-                bat 'npm run deploy'
+                script {
+                    // Set Git user identity locally
+                    bat 'git config user.email "subbupavar@gmail.com"'
+                    bat 'git config user.name "Pavarna"'
+                }
+
+                timeout(time: 10, unit: 'MINUTES') {
+                    // Run the deployment script
+                    bat 'npm run deploy --verbose'
+                }
             }
         }
+
     }
 
     post {
