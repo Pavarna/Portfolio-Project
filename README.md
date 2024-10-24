@@ -11,7 +11,6 @@ The **master** branch of this repository contains the source code for the portfo
 - **Responsive Design**: Adaptable to both desktop and mobile screens.
 - **Animations**: Smooth transitions and hover effects for a cool, dynamic look.
 - **UI Components**: Uses PrimeReact and PrimeIcons for a sleek user interface.
-- **Routing**: Built with React Router for easy navigation between sections.
 - **Unit Testing**: Components are tested using Jest for reliability.
 
 ## Key Sections
