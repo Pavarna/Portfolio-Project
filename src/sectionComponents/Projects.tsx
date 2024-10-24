@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
     );
     const footer = (
         <>
-            <Button icon="pi pi-github" label="View Live Project" className="p-button-text p-button-rounded" onClick={() => window.open('https://github.com/Pavarna/Portfolio-Project', '_blank')} />
+            <Button icon="pi pi-github" label="View Live Project" className="p-button-text p-button-rounded" onClick={() => window.open('https://pavarna.github.io/Portfolio-Project/', '_blank')} />
             <Button icon="pi pi-github" label="View Code Repo" className="p-button-text p-button-rounded" onClick={() => window.open('https://github.com/Pavarna/Portfolio-Project', '_blank')} />
 
         </>

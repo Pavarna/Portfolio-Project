@@ -85,7 +85,7 @@
 .image-size {
     max-width: 100%;
     height: auto;
-    width: 100%;
+    margin: 0 auto; /* Center the image */
 }
 
 /* Text Panel */
@@ -138,6 +138,10 @@
     word-wrap: break-word; /* Ensures long words are wrapped */
 }
 
+.responsive-fieldset{
+padding: 2rem;
+}
+
 /* Make the TabPanel headers responsive */
 .card .p-tabview-nav {
     flex-wrap: wrap; /* Allows the tab headers to wrap */
@@ -148,10 +152,11 @@
     flex-basis: auto; /* Allows the tabs to adjust size when wrapping */
     white-space: normal; /* Makes sure the text wraps */
     text-align: center; /* Center the text when wrapped */
+    padding: 0.5rem 1rem;
 }
 
 .card .p-tabview-nav .p-tabview-nav-link {
-    padding: 0.5rem 1rem; 
+    padding: 0.5rem 1rem;
 }
 
 /* Make sure the card is responsive */
@@ -187,7 +192,12 @@
 /* When the screen width is 1100px or less, adjust the height */
 @media screen and (max-width: 1100px) {
     .custom-splitter {
-        height: 800px;
+        height: auto;
+        padding: 1rem; /* Add padding on smaller screens */
+    }
+
+    .awards-bitmoji-container {
+        margin: 1rem auto; /* Adjust margin on smaller screens */
     }
 }
 
@@ -209,4 +219,24 @@
     65% { transform: translateY(-60px); }
     85% { transform: translateY(-200px); }
     100% { transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+    .award-card {
+        padding: 1rem;
+        max-width: 100%; /* Allow the card to take full width on smaller screens */
+    }
+
+    .responsive-fieldset {
+        padding-right: 1rem; /* Add padding to the right on smaller screens */
+        padding-left: 1rem;  /* Ensure equal padding on both sides */
+    }
+
+    .custom-splitter {
+        height: auto; /* Allow the height to adjust automatically */
+    }
+
+    .awards-content {
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
 }
