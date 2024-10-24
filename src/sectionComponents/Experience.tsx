@@ -7,15 +7,14 @@ import { Divider } from 'primereact/divider';
 
 const Experience: React.FC = () => {
 
-
     const headerTemplate = (options: any) => {
         const className = `${options.className} justify-content-space-between panel-header`;
         return (
             <div className={className}>
-                <div className="flex align-items-center gap-2 font-bold">
+                <div className="flex align-items-center gap-2 font-bold" role="heading" aria-level={2}>
                     DHL IT Services
                 </div>
-                <div className="font-medium">
+                <div className="font-medium" aria-label="Employment Duration">
                     2022 - Present
                 </div>
             </div>
@@ -23,10 +22,10 @@ const Experience: React.FC = () => {
     };
 
     return (
-        <div className="experience-container">
+        <div className="experience-container" role="region" aria-label="Professional Experience Section">
             <Card className="experience-card">
                 <div className="experience-title-container flex-grow-4 flex align-items-center justify-content-center">
-                    <h1 className="experience-title">
+                    <h1 className="experience-title" role="heading" aria-level={1}>
                         Professional Experiences
                     </h1>
                 </div>
@@ -43,8 +42,8 @@ const Experience: React.FC = () => {
                                 <Panel headerTemplate={headerTemplate} className='panel-card'>
                                     <Divider align="left">
                                         <div className="inline-flex align-items-center">
-                                            <i className="pi pi-code mr-2"></i>
-                                            <b className='heading-color'>Frontend Development Responsiblities</b>
+                                            <i className="pi pi-code mr-2" aria-hidden="true"></i>
+                                            <b className='heading-color'>Frontend Development Responsibilities</b>
                                         </div>
                                     </Divider>
                                     <p className="m-0 experience-description-card">
@@ -70,7 +69,7 @@ const Experience: React.FC = () => {
                                     </p>
                                     <Divider align="left">
                                         <div className="inline-flex align-items-center">
-                                            <i className="pi pi-users mr-2"></i>
+                                            <i className="pi pi-users mr-2" aria-hidden="true"></i>
                                             <b className='heading-color'>Management & Communication Responsibilities</b>
                                         </div>
                                     </Divider>

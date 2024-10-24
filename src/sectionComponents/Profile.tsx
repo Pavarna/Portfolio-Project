@@ -13,63 +13,62 @@ const Profile: React.FC = () => {
         // Function to change role every 2 seconds
         const intervalId = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % roles.length); // Cycle through roles sequentially
-        }, 1000); // Change role every 2 seconds
+        }, 2000); // Change role every 2 seconds
 
         return () => clearInterval(intervalId); // Cleanup the interval on component unmount
     }, [roles.length]); // Only depend on the length of 'roles'
 
     useEffect(() => {
         setRole(roles[index]); // Update the role when index changes
-    }, [roles, index]); // Only depend on 'index' since 'roles' is memoized
+    }, [index, roles]); // Only depend on 'index' since 'roles' is memoized
 
     return (
-        <div className="overview-container">
-            {/* Profile Card */}
+        <div className="overview-container" role="main" aria-labelledby="profile-title">
             <Card className="overview-card">
                 <div className="flex overview-content align-items-stretch flex-wrap">
                     {/* Bitmoji on the left */}
                     <div className="flex-grow-2 flex align-items-center justify-content-center bitmoji-container">
-                        <img src={BitmojiGIF} alt="My Bitmoji" className="bitmoji-gif" />
+                        <img src={BitmojiGIF} alt="Bitmoji of Pavarna" className="bitmoji-gif" />
                     </div>
 
                     {/* Title, Role, and PrimeReact Cards for Each Description */}
-                    <div className="flex-grow-4 flex align-items-start justify-content-start content-section">
+                    <div className="flex-grow-4 flex align-items-start justify-content-start content-section" role="region" aria-labelledby="description-section">
                         <div className="grid">
                             {/* Title and Role */}
-                            <div className="overview-title col-12">
-                                <h1> Pavarna S - <span className="overview-title-role">{role}</span></h1>
+                            <div className="overview-title col-12" id="profile-title">
+                                <h1>Pavarna S - <span className="overview-title-role" aria-live="polite">{role}</span></h1>
                             </div>
 
                             {/* PrimeReact Cards for Each List Item (2 in each row) */}
-                            <div className="description-section grid">
+                            <div className="description-section grid" id="description-section" aria-label="Skills and expertise">
                                 <div className="col-6">
-                                    <Card className="description-card">
-                                        Dynamic and result-driven experienced ReactJS developer with over 2 years of experience specializing in <b>ReactJS, TypeScript, and UI/UX design</b>.
+                                    <Card className="description-card" aria-labelledby="description-1">
+                                        <span id="description-1">Dynamic and result-driven ReactJS developer with 2+ years of experience specializing in <b>ReactJS, TypeScript, and UI/UX design</b>.</span>
                                     </Card>
                                 </div>
                                 <div className="col-6">
-                                    <Card className="description-card">
-                                        Strong expertise in <b>Agile development, DevSecOps, and collaborating with cross-functional teams</b> to deliver high-quality software solutions.
+                                    <Card className="description-card" aria-labelledby="description-2">
+                                        <span id="description-2">Strong expertise in <b>Agile development, DevSecOps, and collaboration with cross-functional teams</b> to deliver high-quality software solutions.</span>
                                     </Card>
                                 </div>
                                 <div className="col-6">
-                                    <Card className="description-card">
-                                        <b>Expanding knowledge</b> in <b>Docker and Kubernetes</b>, with additional capability in <b>performing Software Business Analyst</b> responsibilities.
+                                    <Card className="description-card" aria-labelledby="description-3">
+                                        <span id="description-3"><b>Expanding knowledge</b> in <b>Docker and Kubernetes</b>, with additional capability in <b>Software Business Analyst</b> responsibilities.</span>
                                     </Card>
                                 </div>
                                 <div className="col-6">
-                                    <Card className="description-card">
-                                        Experienced in working <b>solely on the UI, taking full ownership</b> of the front-end development lifecycle.
+                                    <Card className="description-card" aria-labelledby="description-4">
+                                        <span id="description-4">Experienced in working <b>solely on the UI</b>, taking full ownership of the front-end development lifecycle.</span>
                                     </Card>
                                 </div>
                                 <div className="col-6">
-                                    <Card className="description-card">
-                                        Proven track record of building responsive, user-friendly web applications within timelines that meet business objectives while ensuring <b>code quality, security, and scalability</b>.
+                                    <Card className="description-card" aria-labelledby="description-5">
+                                        <span id="description-5">Proven track record of building responsive, user-friendly web applications while ensuring <b>code quality, security, and scalability</b>.</span>
                                     </Card>
                                 </div>
                                 <div className="col-6">
-                                    <Card className="description-card">
-                                        YT channel with 20k+ subscribers, <b>sharing free courses, internships, & masterclasses</b> in Tamil, making career opportunities accessible for non-English speakers.
+                                    <Card className="description-card" aria-labelledby="description-6">
+                                        <span id="description-6">YT channel with 20k+ subscribers, <b>sharing free courses, internships, & masterclasses</b> in Tamil, helping non-English speakers access career opportunities.</span>
                                     </Card>
                                 </div>
                             </div>

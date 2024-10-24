@@ -12,10 +12,10 @@ import BitmojiGIF from '../assets/images/Bitmoji Flowers.png';
 
 const Awards: React.FC = () => {
     return (
-        <div className="award-container">
+        <div className="award-container" role="region" aria-labelledby="awards-title">
             <Card className="award-card">
                 <div className="flex-grow-4 flex align-items-center justify-content-center">
-                    <h1 className="awards-title">
+                    <h1 className="awards-title" id="awards-title">
                         Awards & Accomplishments
                     </h1>
                 </div>
@@ -25,18 +25,18 @@ const Awards: React.FC = () => {
 
                             {/* Awards Fieldset */}
                             <Fieldset legend={<span className="title-text-color">Awards</span>} className="responsive-fieldset">
-                                <p className="m-0  awards-description-card">
+                                <p className="m-0 awards-description-card">
                                     <h2 className="title-text-color">Very Special Achievement Award (VESPAA)</h2>
                                     Awarded for <b>outstanding dedication</b> and <b>leadership</b> as the <b>SME</b> and <b>Technical Lead</b> for the key application in DHL IT Services. Successfully ensured all releases in 2023 and Q1-2024 were <b>delivered on time and with high quality</b>, without any stakeholder escalations.
                                 </p>
-                                <Divider align="center"></Divider>
+                                <Divider align="center" />
                                 <p className="m-0 awards-description-card">
                                     <h2 className="title-text-color">Gold Medalist - First Rank Holder</h2>
                                     I am a proud <b>gold medalist</b> and <b>1st rank holder</b> in BSc Computer Technology from Bharathiar University, which has over 100 affiliated colleges. This prestigious achievement highlights my academic excellence and dedication in a highly competitive environment.
                                 </p>
                             </Fieldset>
 
-                            <Divider align="center"></Divider>
+                            <Divider align="center" />
                             <Fieldset legend={<span className="title-text-color">Accomplishments</span>} className="responsive-fieldset">
                                 <div className="card">
                                     <TabView>
@@ -46,13 +46,15 @@ const Awards: React.FC = () => {
                                                     <SplitterPanel className="flex align-items-center justify-content-center" size={25} minSize={10}>
                                                         <div>
                                                             <Image src={metaCertificate} zoomSrc={metaCertificate} alt="Meta Frontend Specialization Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
-                                                            <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span>Click on the image</h6>
+                                                            <h6 className='flex align-items-center justify-content-center'>
+                                                                <span className='pi pi-search-plus'></span>Click on the image
+                                                            </h6>
                                                         </div>
                                                     </SplitterPanel>
                                                     <SplitterPanel className="flex align-items-center justify-content-center" size={75}>
                                                         <div className="text-container" style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
                                                             <h3 className="title-text-color">Meta Front-End Developer Specialization: Professional Certificate - 9 course series</h3>
-                                                            <ol>
+                                                            <ol className='description-color'>
                                                                 <li>Introduction to Front-End Development</li>
                                                                 <li>Programming with JavaScript</li>
                                                                 <li>Version Control</li>
@@ -74,19 +76,20 @@ const Awards: React.FC = () => {
                                                     <SplitterPanel className="flex align-items-center justify-content-center" size={25} minSize={10}>
                                                         <div>
                                                             <Image src={IBMCertificate} zoomSrc={IBMCertificate} alt="IBM Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
-                                                            <h6 className='flex align-items-center justify-content-center'><span className='pi pi-search-plus'></span> Click on the image</h6>
+                                                            <h6 className='flex align-items-center justify-content-center'>
+                                                                <span className='pi pi-search-plus'></span> Click on the image
+                                                            </h6>
                                                         </div>
                                                     </SplitterPanel>
                                                     <SplitterPanel className="flex align-items-center justify-content-center" size={75}>
                                                         <div className="text-container" style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
                                                             <h3 className="title-text-color">IBM Introduction to Containers w/ Docker, Kubernetes & Openshift.</h3>
-                                                            <p>
+                                                            <p className='description-color'>
                                                                 I learned how to build, manage, and deploy containerized applications using Docker, orchestrate them with Kubernetes, and explore advanced features like scaling and monitoring in OpenShift.
                                                             </p>
                                                         </div>
                                                     </SplitterPanel>
                                                 </Splitter>
-
                                             </p>
                                         </TabPanel>
                                     </TabView>
