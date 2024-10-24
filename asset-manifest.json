@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-Project/static/css/main.e8ddcdd0.css",
-    "main.js": "/Portfolio-Project/static/js/main.c9a8d323.js",
+    "main.css": "/Portfolio-Project/static/css/main.d6c03cbf.css",
+    "main.js": "/Portfolio-Project/static/js/main.96004baf.js",
     "static/js/453.d4d5874c.chunk.js": "/Portfolio-Project/static/js/453.d4d5874c.chunk.js",
     "static/media/Bitmoji surfing the net.png": "/Portfolio-Project/static/media/Bitmoji surfing the net.5c26f013d35076736c66.png",
     "static/media/Portfolio Project Thumbnail.png": "/Portfolio-Project/static/media/Portfolio Project Thumbnail.a003e02ac0344fa4fe52.png",
@@ -17,12 +17,12 @@
     "static/media/primeicons.ttf": "/Portfolio-Project/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
     "static/media/primeicons.woff2": "/Portfolio-Project/static/media/primeicons.024b32cc7bf399b1a847.woff2",
     "index.html": "/Portfolio-Project/index.html",
-    "main.e8ddcdd0.css.map": "/Portfolio-Project/static/css/main.e8ddcdd0.css.map",
-    "main.c9a8d323.js.map": "/Portfolio-Project/static/js/main.c9a8d323.js.map",
+    "main.d6c03cbf.css.map": "/Portfolio-Project/static/css/main.d6c03cbf.css.map",
+    "main.96004baf.js.map": "/Portfolio-Project/static/js/main.96004baf.js.map",
     "453.d4d5874c.chunk.js.map": "/Portfolio-Project/static/js/453.d4d5874c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8ddcdd0.css",
-    "static/js/main.c9a8d323.js"
+    "static/css/main.d6c03cbf.css",
+    "static/js/main.96004baf.js"
   ]
 }
