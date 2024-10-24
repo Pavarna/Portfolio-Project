@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Card } from 'primereact/card'; // Import PrimeReact Card
 import BitmojiGIF from '../assets/images/Bitmoji from laptop.png'; // Adjust the path to your GIF
 import './sectionCssStyles/Profile.css'; // Import your custom styles
 import 'primeflex/primeflex.css';
 
 const Profile: React.FC = () => {
-    const roles = ["Frontend Developer", "ReactJs Developer", "Software Developer", "Educational YouTuber"]; // Array of roles
+    const roles = useMemo(() => ["Frontend Developer", "ReactJs Developer", "Software Developer", "Educational YouTuber"], []); // Memoized array to avoid recreation on every render
     const [role, setRole] = useState(roles[0]); // Initial role state
     const [index, setIndex] = useState(0); // Index for tracking current role
 
@@ -16,11 +16,11 @@ const Profile: React.FC = () => {
         }, 1000); // Change role every 2 seconds
 
         return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-    }, [roles.length]); // Depend on roles length
+    }, [roles.length]); // Only depend on the length of 'roles'
 
     useEffect(() => {
         setRole(roles[index]); // Update the role when index changes
-    }, [index, roles]);
+    }, [roles, index]); // Only depend on 'index' since 'roles' is memoized
 
     return (
         <div className="overview-container">
@@ -69,7 +69,8 @@ const Profile: React.FC = () => {
                                 </div>
                                 <div className="col-6">
                                     <Card className="description-card">
-                                    YT channel with 20k+ subscribers, <b>sharing free courses, internships, & masterclasses</b> in Tamil, making career opportunities accessible for non-English speakers.                                    </Card>
+                                        YT channel with 20k+ subscribers, <b>sharing free courses, internships, & masterclasses</b> in Tamil, making career opportunities accessible for non-English speakers.
+                                    </Card>
                                 </div>
                             </div>
                         </div>
