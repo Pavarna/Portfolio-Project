@@ -25,7 +25,7 @@ const Experience: React.FC = () => {
         <div className="experience-container" role="region" aria-label="Professional Experience Section">
             <Card className="experience-card">
                 <div className="experience-title-container flex-grow-4 flex align-items-center justify-content-center">
-                    <h1 className="experience-title" role="heading" aria-level={1}>
+                    <h1 className="experience-title" aria-level={1}>
                         Professional Experiences
                     </h1>
                 </div>
