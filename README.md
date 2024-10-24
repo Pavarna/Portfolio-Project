@@ -27,7 +27,6 @@ Deployed on **GitHub Pages**: [View Live](https://Pavarna.github.io/Portfolio-Pr
 - **PrimeReact**: Rich set of UI components for React applications.
 - **PrimeFlex**: A lightweight responsive CSS utility library for creating flexible layouts.
 - **PrimeIcons**: Icon library to use with PrimeReact.
-- **React Router**: Declarative routing for React applications.
 - **Jest**: Unit testing framework to ensure code reliability.
 - **GitHub Pages**: Hosting for static websites directly from GitHub.
 - **CSS3 & Animations**: Modern CSS techniques for smooth animations and transitions.
