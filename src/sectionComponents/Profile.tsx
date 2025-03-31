@@ -43,7 +43,7 @@ const Profile: React.FC = () => {
                             <div className="description-section grid" id="description-section" aria-label="Skills and expertise">
                                 <div className="col-6">
                                     <Card className="description-card" aria-labelledby="description-1">
-                                        <span id="description-1">Dynamic and result-driven ReactJS developer with 2+ years of experience specializing in <b>ReactJS, TypeScript, and UI/UX design</b>.</span>
+                                        <span id="description-1">Certified  CKAD ReactJS developer with over 2.8 years of dynamic experience, specializing in <b>ReactJS, TypeScript, and UI/UX design</b>.</span>
                                     </Card>
                                 </div>
                                 <div className="col-6">

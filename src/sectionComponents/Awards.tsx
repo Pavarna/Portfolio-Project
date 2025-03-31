@@ -5,7 +5,7 @@ import { TabView, TabPanel } from 'primereact/tabview';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Image } from 'primereact/image';
 import metaCertificate from '../assets/images/Pavarna Meta Certificate.png';
-import IBMCertificate from '../assets/images/Pavarna IBM Certificate.png';
+import CKADCertificate from '../assets/images/Pavarna CKAD Certificate.png';
 import { Card } from 'primereact/card';
 import { Divider } from 'primereact/divider';
 import BitmojiGIF from '../assets/images/Bitmoji Flowers.png';
@@ -40,6 +40,28 @@ const Awards: React.FC = () => {
                             <Fieldset legend={<span className="title-text-color">Accomplishments</span>} className="responsive-fieldset">
                                 <div className="card">
                                     <TabView>
+                                    <TabPanel header={<span className="title-text-color">DevOps</span>} leftIcon="pi pi-user mr-2">
+                                            <p className="m-0">
+                                                <Splitter className="custom-splitter" style={{ flexWrap: 'wrap' }}>
+                                                    <SplitterPanel className="flex align-items-center justify-content-center" size={25} minSize={10}>
+                                                        <div>
+                                                            <Image src={CKADCertificate} zoomSrc={CKADCertificate} alt="CKAD Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
+                                                            <h6 className='flex align-items-center justify-content-center'>
+                                                                <span className='pi pi-search-plus'></span> Click on the image
+                                                            </h6>
+                                                        </div>
+                                                    </SplitterPanel>
+                                                    <SplitterPanel className="flex align-items-center justify-content-center" size={75}>
+                                                        <div className="text-container" style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+                                                            <h3 className="title-text-color">Certified Kubernetes Application Developer (CKAD)</h3>
+                                                            <p className='description-color'>
+                                                                Achieved certification demonstrating proficiency in designing, building, and managing applications on Kubernetes.
+                                                            </p>
+                                                        </div>
+                                                    </SplitterPanel>
+                                                </Splitter>
+                                            </p>
+                                        </TabPanel>
                                         <TabPanel header={<span className="title-text-color">Frontend Development</span>} leftIcon="pi pi-calendar mr-2">
                                             <p className="m-0">
                                                 <Splitter className="custom-splitter" style={{ flexWrap: 'wrap' }}>
@@ -69,29 +91,7 @@ const Awards: React.FC = () => {
                                                     </SplitterPanel>
                                                 </Splitter>
                                             </p>
-                                        </TabPanel>
-                                        <TabPanel header={<span className="title-text-color"> DevOps</span>} leftIcon="pi pi-user mr-2">
-                                            <p className="m-0">
-                                                <Splitter className="custom-splitter" style={{ flexWrap: 'wrap' }}>
-                                                    <SplitterPanel className="flex align-items-center justify-content-center" size={25} minSize={10}>
-                                                        <div>
-                                                            <Image src={IBMCertificate} zoomSrc={IBMCertificate} alt="IBM Certificate" width="100%" style={{ maxWidth: '120px', height: 'auto' }} preview className='image-size' />
-                                                            <h6 className='flex align-items-center justify-content-center'>
-                                                                <span className='pi pi-search-plus'></span> Click on the image
-                                                            </h6>
-                                                        </div>
-                                                    </SplitterPanel>
-                                                    <SplitterPanel className="flex align-items-center justify-content-center" size={75}>
-                                                        <div className="text-container" style={{ padding: '1rem', maxWidth: '100%', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
-                                                            <h3 className="title-text-color">IBM Introduction to Containers w/ Docker, Kubernetes & Openshift.</h3>
-                                                            <p className='description-color'>
-                                                                I learned how to build, manage, and deploy containerized applications using Docker, orchestrate them with Kubernetes, and explore advanced features like scaling and monitoring in OpenShift.
-                                                            </p>
-                                                        </div>
-                                                    </SplitterPanel>
-                                                </Splitter>
-                                            </p>
-                                        </TabPanel>
+                                        </TabPanel>                                   
                                     </TabView>
                                 </div>
                             </Fieldset>

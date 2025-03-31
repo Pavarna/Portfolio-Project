@@ -66,14 +66,14 @@ const Skills: React.FC = () => {
                             <div className="col-6">
                                 <Card className="skills-description-card" aria-labelledby="devops-tools">
                                     <span id="devops-tools">
-                                        <b className="skills-heading-color">DevOps Tools:</b> Docker, Kubernetes (Basics)
+                                        <b className="skills-heading-color">DevOps Tools:</b> Docker, Kubernetes(CKAD certified)
                                     </span>
                                 </Card>
                             </div>
                             <div className="col-6">
                                 <Card className="skills-description-card" aria-labelledby="agile-project-mgmt">
                                     <span id="agile-project-mgmt">
-                                        <b className="skills-heading-color">Agile Project Management:</b> Jira, User Stories, Business Communication, Scrum (Basics)
+                                        <b className="skills-heading-color">Agile Project Management:</b> Jira, User Stories, Business Communication, Scrum 
                                     </span>
                                 </Card>
                             </div>
